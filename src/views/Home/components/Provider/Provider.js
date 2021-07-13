@@ -109,11 +109,13 @@ const Provider = props => {
             item
             container
             xs={12}
-            spacing={isMd ? 4 : 2}
+            sm={12}
+            // md={6}
+            spacing={5}
             direction={index % 2 === 1 ? 'row-reverse' : 'row'}
             className={classes.listGrid}
           >
-            <Grid item xs={12} sm={6} className={classes.gridbox} container>
+            <Grid item xs={12} sm={12} md={6} className={classes.gridbox} container>
               <SectionHeader
                 titleVariant="h5"
                 title={item.title}
@@ -149,8 +151,8 @@ const Provider = props => {
                 disableGutter
               />
             </Grid>
-            <Grid item container justify="center" xs={12} sm={6} style={{
-              padding: isMd ? '50px' : '10px' 
+            <Grid item container justify="center" xs={12} sm={12} md={6} style={{
+              padding: '50px' 
             }}>
               <Image src={item.illustration} alt={item.title} />
             </Grid>

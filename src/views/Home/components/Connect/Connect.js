@@ -37,16 +37,24 @@ const useStyles = makeStyles(theme => ({
     backgroundRepeat: 'no-repeat',
     background: "url('/assets/shadow.png')",
     width: '100%',
-    height: '500px',
-    backgroundSize: '100%'
+    height: '100%',
+    backgroundSize: '100% 84%'
   },
   container: {
     width: '100%',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    [theme.breakpoints.down('sm')]: {
-      marginTop: '20px',
+    padding: '35px',
+    
+    [theme.breakpoints.up('md')]: {
+      padding: '100px'
+    },
+    [theme.breakpoints.up('lg')]: {
+      padding: '180px'
+    },
+    [theme.breakpoints.up('xl')]: {
+      padding: '280px'
     },
   },
   rightAllow: {
@@ -101,8 +109,8 @@ const Connect = props => {
         } 
         data-aos="fade-up"
       />
-      <Grid container spacing={isMd ? 4 : 2} className={classes.container }>
-          <Image src={'/assets/ad-bg.png'} className={ classes.mainImg } /> 
+      <Grid container className={classes.container }>
+          <img className={ classes.mainImg } alt="..." src="/assets/ad-bg.png" width="auto" height="auto"></img>
       </Grid>
     </div>
   );

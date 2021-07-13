@@ -151,7 +151,7 @@ const SidebarNav = props => {
 
   return (
     <List {...rest} className={clsx(classes.root, className)}>
-      <ListItem className={classes.closeIcon} onClick={() => onClose()}>
+      {/* <ListItem className={classes.closeIcon} onClick={() => onClose()}>
         <ListItemIcon className={classes.listItemIcon}>
           <CloseIcon fontSize="small" />
         </ListItemIcon>
@@ -179,17 +179,54 @@ const SidebarNav = props => {
           Account
         </Typography>
         <AccountPages />
+      </ListItem> */}
+
+      <ListItem className={classes.listItem}>
+        <Button
+          fullWidth
+          component="a"
+          href="/"
+        >
+          Developer
+        </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          variant="outlined"
           fullWidth
           component="a"
-          href="/documentation"
+          href="/"
         >
-          Documentation
+          Solutions
         </Button>
       </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          fullWidth
+          component="a"
+          href="/"
+        >
+          Pledge
+        </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          fullWidth
+          component="a"
+          href="/"
+        >
+          Ecosystem
+        </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          fullWidth
+          component="a"
+          href="/"
+        >
+          Blog
+        </Button>
+      </ListItem>
+
       <ListItem className={classes.listItem}>
         <Button
           variant="contained"
@@ -199,9 +236,11 @@ const SidebarNav = props => {
           target="blank"
           href="https://material-ui.com/store/items/the-front-landing-page/"
         >
-          Buy Now
+          Go Now
         </Button>
       </ListItem>
+    
+    
     </List>
   );
 };

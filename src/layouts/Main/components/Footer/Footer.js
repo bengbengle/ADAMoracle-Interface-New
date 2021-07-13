@@ -107,11 +107,6 @@ const Footer = props => {
     const { item } = props;
     return (
       <List disablePadding className={classes.menuItem}>
-        {/* <ListItem disableGutters className={classes.menuGroupItem}>
-          <Typography variant="body2" className={classes.menuGroupTitle}>
-            {item.groupTitle}
-          </Typography>
-        </ListItem> */}
         {item.pages.map((page, i) => (
           <ListItem disableGutters key={i} className={classes.menuGroupItem}>
             <Typography

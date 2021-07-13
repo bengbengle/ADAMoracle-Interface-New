@@ -8,23 +8,13 @@ import { Topbar, Footer, Sidebar } from './components';
 const useStyles = makeStyles(theme => ({
   root: {
     height: '100%',
-    backgroundSize: '100%',
+    backgroundSize: '1920px',
     backgroundColor: '#252525',
     backgroundRepeat: 'no-repeat',
     maxHeight: '700px'
 
   },
   bgimg: {
-    // background: 'url(/assets/header-bg2.png) #252525', 
-    // backgroundSize: '100%',
-    // backgroundRepeat: 'no-repeat',
-    // position: 'absolute',
-    // zIndex: 0,
-    // width: '100%',
-    // maxWidth: '1300px',
-    // height: '777px',
-    // left: 'calc(50% - 650px)',
-
     left: '0px',
     width: '100%',
     height: '1200px',
@@ -34,11 +24,10 @@ const useStyles = makeStyles(theme => ({
     background: 'url(/assets/header-bg2.png)',
     backgroundSize: '100%',
     backgroundRepeat: 'no-repeat',
-
+    top: '-100px',
     [theme.breakpoints.down('md')]: {
       maxWidth: '100%',
-      // calc(50% - 650px)
-      left: 0
+      top: 0
     },
   }
 }));

@@ -11,7 +11,8 @@ import {
   Provider,
   Computing,
   News,
-  Team
+  Team,
+  Roadmap
 } from './components';
 
 import {
@@ -27,6 +28,7 @@ import {
 const useStyles = makeStyles(theme => ({
   pagePaddingTop: {
     paddingTop: theme.spacing(3),
+    maxWidth: 'initial',
     [theme.breakpoints.up('md')]: {
       paddingTop: theme.spacing(5),
     },
@@ -70,6 +72,10 @@ const Home = () => {
         <Computing data={computing_data} />
       </Section>
       
+      <Section>
+        <Roadmap data={team_data} />
+      </Section>
+
       <Section>
         <Team data={team_data} />
       </Section>

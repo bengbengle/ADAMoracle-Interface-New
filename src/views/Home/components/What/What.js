@@ -17,6 +17,15 @@ const useStyles = makeStyles(theme => ({
       maxWidth: 500,
     },
   },
+  titleTxt: {
+    width: '321px',
+    height: '100px',
+    fontSize: '2.7rem',
+    fontFamily: 'Alibaba PuHuiTi',
+    fontWeight: 800,
+    color: 'rgb(112 112 112)',
+    marginLeft: '30px',
+  }
 }));
 
 const What = props => {
@@ -46,15 +55,7 @@ const What = props => {
                       height: '102px',
                       background: '#FF6B22'
                     }}></div>
-                    <div style={{
-                      width: '321px',
-                      height: '100px',
-                      fontSize: '2.7rem',
-                      fontFamily: 'Alibaba PuHuiTi',
-                      fontWeight: 800,
-                      color: 'rgb(112 112 112)',
-                      marginLeft: '30px'
-                    }}>
+                    <div className={classes.titleTxt }>
                       What is ADAMoracle
                     </div>
                  

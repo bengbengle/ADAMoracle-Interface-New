@@ -31,6 +31,7 @@ const useStyles = makeStyles(theme => ({
     maxWidth: theme.layout.contentWidth,
     width: '100%',
     margin: '0 auto',
+    minHeight: '100px',
     padding: theme.spacing(0, 2),
     [theme.breakpoints.up('sm')]: {
       padding: theme.spacing(0, 8),
@@ -92,6 +93,12 @@ const useStyles = makeStyles(theme => ({
       marginLeft: '0px',
     },
   },
+  logoTitle: {
+    lineHeight: '52px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
   logoImage: {
     width: '100%',
     height: '100%',
@@ -129,7 +136,6 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
   return (
     <Toolbar disableGutters className={classes.toolbar} {...rest}>
       <Hidden mdUp>
-        {/* <DarkModeToggler themeMode={themeMode} onClick={() => themeToggler()} /> */}
         <IconButton
           className={classes.iconButton}
           onClick={onSidebarOpen}
@@ -139,14 +145,14 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
         </IconButton>
       </Hidden>
       <div className={classes.logoContainer}>
-        <a href="/" title="thefront">
-          <Image
+        <div href="/" title="thefront" className={classes.logoTitle}>
+          <Image 
             className={classes.logoImage}
             src='/assets/logo.png'
             alt="ADAMoracle"
             lazy={false}
           />
-        </a>
+        </div>
       </div>
       <div className={classes.flexGrow} />
       <Hidden smDown>
@@ -158,7 +164,7 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
               </ListItem>
             ))
           }
-          <ListItem className={clsx(classes.listItem, 'menu-item--no-dropdown')}>
+          {/* <ListItem className={clsx(classes.listItem, 'menu-item--no-dropdown')}>
             <Button
               variant="contained"
               color="primary"
@@ -168,7 +174,7 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
             >
               切换中文
             </Button>
-          </ListItem>
+          </ListItem> */}
         </List>
       </Hidden>
 

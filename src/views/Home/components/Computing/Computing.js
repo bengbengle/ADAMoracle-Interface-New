@@ -61,7 +61,23 @@ const useStyles = makeStyles(theme => ({
     position: 'absolute',
     transform: 'rotate(269deg)',
     borderBottomRightRadius: '100%',
-    borderBottomLeftRadius: '100%'
+    borderBottomLeftRadius: '100%',
+    animation: 'turn 10s ease-in-out infinite',
+    [theme.breakpoints.down('md')]: {
+      display: 'none',
+    }
+  },
+  bgshape1: {
+    width: '200px',
+    height: '200px',
+    background: 'linear-gradient(90deg, #3C3C3C, rgba(60, 60, 60, 0))',
+    right: '-100px',
+    position: 'absolute',
+    transform: 'rotate(0deg)',
+    borderRadius: '50%',
+    [theme.breakpoints.down('md')]: {
+      display: 'none',
+    }
   }
 }));
 
@@ -75,6 +91,12 @@ const Computing = props => {
     defaultMatches: true,
   });
  
+  const image1 = {
+    src: '/assets/arrow.png',
+    srcSet: 'https://assets.maccarianagency.com/the-front/photos/expo-gallery/gallery1@2x.jpg 2x',
+    alt: '...',
+  }
+
   return (
     <div className={className} data-aos="fade-up" {...rest}>
       <SectionHeader
@@ -84,6 +106,12 @@ const Computing = props => {
             <p className={classes.textWhite}>
               Become Computing Node
             </p>
+            <Image
+              src={image1.src}
+              srcSet={image1.srcset}
+              alt={image1.alt}
+              className={ classes.headerAllow }
+            />
           </>
         }
         subtitle={
@@ -98,8 +126,8 @@ const Computing = props => {
           className: classes.subTextClass,
         }}
       />
-      <Grid container spacing={isMd ? 10 : 2} justify="center"  >
-        <Grid item xs={12} sm={6} container  
+      <Grid container spacing={isMd ? 10 : 0} justify="center"  >
+        <Grid item xs={12} sm={12} md={6} container  
           className={classes.listGrid}
         >
             <SectionHeader
@@ -142,7 +170,7 @@ const Computing = props => {
                 className='sectionBox'
               />
         </Grid>
-        <Grid item xs={12} sm={6} container
+        <Grid item xs={12} sm={12} md={6} container
           className={classes.listGrid}
         >
             <SectionHeader
@@ -188,7 +216,8 @@ const Computing = props => {
       </Grid>
     
       <div className={classes.bgshape}></div>
-                
+      <div className={classes.bgshape1}></div>
+              
     </div>
   );
 };

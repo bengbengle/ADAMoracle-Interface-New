@@ -340,8 +340,8 @@ export const computing_data = [
 export const news_data = [
   {
     cover: {
-      src: '/assets/video-1.png',
-      srcSet: '/assets/video-1.png 2x',
+      src: '/assets/1.png',
+      srcSet: '/assets/1.png 2x',
     },
     title: 'News',
     subtitle:
@@ -349,7 +349,7 @@ export const news_data = [
     author: {
       photo: {
         src: 'assets/video-1.png',
-        srcSet: '/assets/video-1.png 2x',
+        srcSet: '/assets/1.png 2x',
       },
       name: 'Akachi Luccini',
     },
@@ -358,16 +358,16 @@ export const news_data = [
   },
   {
     cover: {
-      src: '/assets/video-2.png',
-      srcSet: '/assets/video-2.png 2x',
+      src: '/assets/2.png',
+      srcSet: '/assets/2.png 2x',
     },
     title: "News‎",
     subtitle:
       "A self-cleaning water bottle that'll help you reach your hydration goal. Neutralizes up to 99%* of harmful, odor-causing bacteria using UV-C light.",
     author: {
       photo: {
-        src: '/assets/video-2.png',
-        srcSet: '/assets/video-2.png 2x 2x',
+        src: '/assets/2.png',
+        srcSet: '/assets/2.png 2x 2x',
       },
       name: 'Kate Segelson',
     },
@@ -388,7 +388,7 @@ export const team_data = [
     author: {
       photo: {
         src: 'assets/video-1.png',
-        srcSet: '/assets/video-1.png 2x',
+        srcSet: '/assets/1.png 2x',
       },
       name: 'Akachi Luccini',
     },
@@ -405,8 +405,8 @@ export const team_data = [
       "A self-cleaning water bottle that'll help you reach your hydration goal. Neutralizes up to 99%* of harmful, odor-causing bacteria using UV-C light.",
     author: {
       photo: {
-        src: '/assets/video-2.png',
-        srcSet: '/assets/video-2.png 2x 2x',
+        src: '/assets/2.png',
+        srcSet: '/assets/2.png 2x 2x',
       },
       name: 'Kate Segelson',
     },
@@ -424,8 +424,8 @@ export const team_data = [
       "A self-cleaning water bottle that'll help you reach your hydration goal. Neutralizes up to 99%* of harmful, odor-causing bacteria using UV-C light.",
     author: {
       photo: {
-        src: '/assets/video-2.png',
-        srcSet: '/assets/video-2.png 2x 2x',
+        src: '/assets/2.png',
+        srcSet: '/assets/2.png 2x 2x',
       },
       name: 'Kate Segelson',
     },

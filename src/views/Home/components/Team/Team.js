@@ -21,6 +21,8 @@ const useStyles = makeStyles(theme => ({
   },
   image: {
     objectFit: 'cover',
+    borderTopLeftRadius: '50px',
+    borderTopRightRadius: '50px'
   },
   blogTitle: {
     fontWeight: 700,
@@ -62,6 +64,22 @@ const useStyles = makeStyles(theme => ({
       marginBottom: theme.spacing(4),
     },
   },
+
+  bottomTips: {
+    position: 'absolute',
+    bottom: '0px',
+    padding: '5px',
+    paddingLeft: '15px',
+    background: '#14141491',
+    width: '100%',
+    color: '#E96322',
+    fontWeight: 500,
+    fontSize: '12px'
+  },
+  bottomtitle: {
+    fontWeight: 500,
+    fontSize: '18px'
+  },
 }));
 
 const Team = props => {
@@ -75,8 +93,8 @@ const Team = props => {
         className={classes.image}
         lazyProps={{ width: '100%', height: '100%' }}
       />
-      <div className='bottomTips'>
-        <div className='bottomTitle'>Ahmed Ebrahim</div>
+      <div className={classes.bottomTips}>
+        <div className={classes.bottomtitle}> Ahmed Ebrahim</div>
         <div className='bottomDesc'>ADAMoracle founder and CEO Ahmed Ebrahim</div>
       </div>
     </>
@@ -93,12 +111,15 @@ const Team = props => {
           color: 'textPrimary',
           className: classes.title,
         }}
+        primaryCta= {
+          ''
+        }
         className={classes.descriptionCta}
         data-aos="fade-up"
       />
-      <Grid container spacing={5}>
+      <Grid container spacing={0}>
         {data.map((item, index) => (
-          <Grid item xs={12} sm={12} md={4} key={index} data-aos="fade-up" 
+          <Grid item xs={12} sm={12} md={4} key={index} data-aos="fade-up"  spacing={10}
           style={{
             backgroundColor: '#00000000'
           }}>

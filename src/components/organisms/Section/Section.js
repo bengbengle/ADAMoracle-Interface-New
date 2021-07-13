@@ -15,6 +15,12 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('md')]: {
       padding: theme.spacing(12, 8),
     },
+    [theme.breakpoints.up('lg')]: {
+      padding: theme.spacing(14, 8),
+    },
+    [theme.breakpoints.up('xl')]: {
+      padding: theme.spacing(16, 8),
+    },
   },
   fullWidth: {
     maxWidth: '100%',

@@ -5,9 +5,13 @@ import { useMediaQuery, Grid, Button, Typography, ListItem, IconButton, List, Sv
 import { Image } from 'components/atoms';
 
 const useStyles = makeStyles(theme => ({
+  container: {
+    maxWidth: 'initial'
+  },
   image: {
-    marginLeft: -20,
-    marginTop: -110,
+    marginLeft: '-5rem',
+    marginTop: '-10rem',
+    width: '80%',
     transition: 'box-shadow .25s ease,transform .25s ease,-webkit-transform .25s ease',
     '&:hover': {
       transform: 'translate3d(0,-5px,0)',
@@ -26,13 +30,22 @@ const useStyles = makeStyles(theme => ({
     }
   },
   centercontainer: {
-    marginTop: '40px'
+    marginTop: '40px',
+    zIndex: '1',
+    [theme.breakpoints.down('md')]: {
+      marginTop: '20px'
+    }
   },
   rightcontainer: {
     display: 'none',
     [theme.breakpoints.down('md')]: {
       display: 'block'
     }
+  },
+  rightImgcontainer: {
+    display: 'flex',
+    justifyContent: 'left',
+    alignItems: 'center'
   },
   icons: {
     flexDirection: 'column',
@@ -59,7 +72,7 @@ const useStyles = makeStyles(theme => ({
     letterSpacing: '3px',
     fontWeight: 300,
     marginTop: '75px',
-    marginLeft: '-42px',
+    marginLeft: '-1.2rem',
     color: '#FFFFFF',
     [theme.breakpoints.down('md')]: {
       display: 'none'
@@ -70,34 +83,48 @@ const useStyles = makeStyles(theme => ({
     marginTop: '60px'
   },
   
-  mosha: {
-    backgroundImage: 'url(/assets/mosha.png)',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: '100%',
+  mosha: { 
     padding: '15px',
-    height: '235px',
-    width: '441px',
+    height: '18vw',
+    width: '35vw',
+    minHeight: '306px',
+    minWidth: '580px',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: "column",
+    backgroundSize: '100% 100%',
+    backgroundImage: 'url(/assets/mosha.png)',
+    backgroundRepeat: 'no-repeat',
+    height: '60%',
     [theme.breakpoints.down('md')]: {
       display: 'flex',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      minWidth: 'auto',
+      minHeight: 'auto',
+      width: '100%'
     }
   },
   title: {
-    width: '400px',
-    height: '65px',
-    fontSize: '75px',
-    fontWeight: 800,
+    top: '-2rem',
+    paddingLeft: '10%',
     color: '#FFFFFF',
-    textAlign: 'center',
+    height: '5rem',
     display: 'inline',
-    top: '-32px',
     position: 'absolute',
-    left: '25px',
-    overflowX: 'visible'
+    fontSize: '75px',
+    overflowX: 'visible',
+    textAlign: 'left',
+    fontWeight: '800',
+    width: '100%',
+    [theme.breakpoints.down('md')]: {
+      'font-size': '50px',
+      overflowX: 'visible',
+      fontWeight: '800',
+      width: '100%',
+      textAlign: 'left',
+      paddingLeft: '10%',
+    }
   },
   content: {
     width: '407px',
@@ -105,24 +132,35 @@ const useStyles = makeStyles(theme => ({
     fontSize: '19px',
     fontWeight: 500,
     color: '#FFFFFF',
-    lineHeight: '34px'
+    lineHeight: '34px',
+    width: '90%',
+    fontSize: '1.5rem',
+    fontWeight: '500',
+    lineHeight: '2.7rem',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '18px',
+      lineHeight: '1.7rem',
+    }
+  },
+  contentdot: {
+    display: 'flex',
+    marginTop: '10px'
   },
   leftd: {
     height:'5px',
     background: 'white',
     marginTop: '10px',
-    position: 'absolute',
     width: '17px',
     display: 'block',
     top: '210px',
     borderRadius: '5px',
-    left: '40px'
+    left: '40px',
+    marginRight: '10px'
   },
   rightd: {
     height:'5px',
     background: 'white',
     marginTop: '10px',
-    position: 'absolute',
     width: '60px',
     display: 'block',
     top: '210px',
@@ -138,11 +176,12 @@ const useStyles = makeStyles(theme => ({
     }
   },
   marginLeft: {
-    marginLeft: '5px',
+    marginLeft: '10px',
     [theme.breakpoints.down('sm')]: {
       marginLeft: '25px',
     }
-  }
+  },
+  
 }));
 
 
@@ -188,15 +227,17 @@ const Hero = props => {
           <div className={classes.mosha }>
             <p className={classes.title} >Oracle 3.0</p>
             <div  className={classes.content} >
-              ADAMoracle is the first decentralized oracle <br/> 
-              network that supports wide-area node  <br/> 
+              <p>
+              ADAMoracle is the first decentralized oracle
+              network that supports wide-area node  
               quotation
-            </div>
-            <div>
+              </p>
+              <div className={classes.contentdot}>
               <span className={classes.leftd}></span> 
               <span className={classes.rightd}></span> 
             </div>
-
+            </div>
+            
           </div>
           <div className={classes.rightcontainer}>
             <List>
@@ -224,24 +265,23 @@ const Hero = props => {
             <Button color="primary" variant="contained" size="large">
               Develope with ADAMoracle
             </Button>
-            <Button size="large" variant="outlined" color="primary" href="/documentation"  className={ classes.marginLeft } >
+            <Button size="large" variant="outlined" color="primary"  className={ classes.marginLeft } >
               White paper
             </Button>
           </div>
         </Grid>
         
         <Grid
+        className={classes.rightImgcontainer}
           item
-          container
           xs={12}
           md={6}
           data-aos={'fade-up'}
         >
-          <Image
-            src='/assets/right-bar.png'
-            alt="TheFront Company"
-            className={classes.image}
-          />
+          <img className={classes.image}
+            alt="TheFront Company" src="/assets/right-bar.png" width="auto" height="auto">
+          </img>
+
         </Grid>
       </Grid>
     </div>
