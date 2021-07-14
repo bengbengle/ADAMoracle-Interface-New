@@ -51,10 +51,10 @@ const useStyles = makeStyles(theme => ({
       padding: '100px'
     },
     [theme.breakpoints.up('lg')]: {
-      padding: '180px'
+      padding: '20px 180px'
     },
     [theme.breakpoints.up('xl')]: {
-      padding: '280px'
+      padding: '20px 280px'
     },
   },
   rightAllow: {

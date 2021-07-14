@@ -117,7 +117,7 @@ const Team = props => {
         className={classes.descriptionCta}
         data-aos="fade-up"
       />
-      <Grid container spacing={0}>
+      <Grid container spacing={5}>
         {data.map((item, index) => (
           <Grid item xs={12} sm={12} md={4} key={index} data-aos="fade-up"  spacing={10}
           style={{
