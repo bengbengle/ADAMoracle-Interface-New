@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
     maxWidth: 'initial'
   },
   image: {
-    marginLeft: '-5rem',
+    marginLeft: '5%',
     marginTop: '-10rem',
     width: '80%',
     transition: 'box-shadow .25s ease,transform .25s ease,-webkit-transform .25s ease',
