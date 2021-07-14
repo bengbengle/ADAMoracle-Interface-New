@@ -32,10 +32,10 @@ const useStyles = makeStyles(theme => ({
   centercontainer: {
     marginTop: '40px',
     zIndex: '1',
-    paddingLeft: '60px',
+    paddingLeft: '60px!important',
     [theme.breakpoints.down('md')]: {
       marginTop: '20px',
-      paddingLeft: 'auto',
+      paddingLeft: 'initial',
     }
   },
   rightcontainer: {
