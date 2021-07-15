@@ -43,13 +43,13 @@ main {
   border-radius: 37px!important;
   background: linear-gradient(90deg, #FF6B22, #CC1E1E);
   color: #ffffff!important;
-  padding: 28px 48px!important;
+  padding: 28px 38px!important;
 }
 .MuiButton-outlinedPrimary {
   color: #ffffff!important;
   border-radius: 37px!important;
   border: 1px solid rgb(255 255 255 / 50%)!important;
-  padding: 28px 48px!important;
+  padding: 28px 38px!important;
 }
 .MuiButton-label {
   font-size: 18px;
