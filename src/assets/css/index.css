@@ -111,17 +111,6 @@ main {
   height: 21px!important;
 }
 
-/* .bottomTips {
-  position: absolute;
-  bottom: 0px;
-  padding: 5px;
-  padding-left: 15px;
-  background: #14141491;
-  width: 100%;
-  color: #E96322;
-  font-weight: 500;
-  font-size: 12px;
-} */
 .bottomList {
   color: #999999;
   display: inline-flex;

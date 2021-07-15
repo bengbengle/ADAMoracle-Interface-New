@@ -34,11 +34,12 @@ const useStyles = makeStyles(theme => ({
     }
   },
   bgbox: {
-    backgroundRepeat: 'no-repeat',
-    background: "url('/assets/shadow.png')",
+    // backgroundRepeat: 'no-repeat',
+    // background: "url('/assets/shadow.png')",
+    // backgroundSize: '100% 84%'
+
     width: '100%',
     height: '100%',
-    backgroundSize: '100% 84%'
   },
   container: {
     width: '100%',
@@ -46,7 +47,10 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     alignItems: 'center',
     padding: '35px',
-    
+    backgroundRepeat: 'no-repeat',
+    background: "url('/assets/shadow.png')",
+    backgroundSize: '100% 84%',
+
     [theme.breakpoints.up('md')]: {
       padding: '100px'
     },
@@ -54,7 +58,7 @@ const useStyles = makeStyles(theme => ({
       padding: '20px 180px'
     },
     [theme.breakpoints.up('xl')]: {
-      padding: '20px 280px'
+      padding: '20px 180px'
     },
   },
   rightAllow: {
