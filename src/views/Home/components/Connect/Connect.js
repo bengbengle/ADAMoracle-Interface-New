@@ -49,7 +49,7 @@ const useStyles = makeStyles(theme => ({
     padding: '35px',
     backgroundRepeat: 'no-repeat',
     background: "url('/assets/shadow.png')",
-    backgroundSize: '100% 84%',
+    backgroundSize: '100% 100%',
 
     [theme.breakpoints.up('md')]: {
       padding: '100px'

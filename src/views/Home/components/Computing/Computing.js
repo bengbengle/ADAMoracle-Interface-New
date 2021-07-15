@@ -54,27 +54,27 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'left'
   },
   bgshape: {
+    top: '0px',
     width: '281px',
-    height: '117px',
+    height: '281px',
     background: 'linear-gradient(90deg, #3C3C3C, rgba(60, 60, 60, 0))',
     left: '-400px',
     position: 'absolute',
     transform: 'rotate(269deg)',
     borderBottomRightRadius: '100%',
     borderBottomLeftRadius: '100%',
-    animation: 'turn 10s ease-in-out infinite',
     [theme.breakpoints.down('md')]: {
       display: 'none',
     }
   },
   bgshape1: {
+    top: '200px',
+    right: '-200px',
     width: '200px',
     height: '200px',
-    background: 'linear-gradient(90deg, #3C3C3C, rgba(60, 60, 60, 0))',
-    right: '-100px',
     position: 'absolute',
-    transform: 'rotate(0deg)',
-    borderRadius: '50%',
+    background: 'linear-gradient(90deg, #3C3C3C, rgba(60, 60, 60, 0))',
+    clipPath: 'circle(50% at right)',
     [theme.breakpoints.down('md')]: {
       display: 'none',
     }

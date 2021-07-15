@@ -19,6 +19,8 @@ import { Image } from 'components/atoms';
 const useStyles = makeStyles(theme => ({
   root: {
     padding: theme.spacing(6, 0),
+    position: 'absolute',
+    width: '100%',
     [theme.breakpoints.up('md')]: {
       padding: theme.spacing(12, 0),
     },
@@ -92,101 +94,70 @@ const useStyles = makeStyles(theme => ({
   navLink: {
     color: 'rgba(255,255,255,.6)',
   },
+  bgshape: {
+    right: '150px',
+    width: '300px',
+    height: '300px',
+    zIndex: 1,
+    position: 'absolute',
+    clipPath: 'circle(50% at right)',
+    background: 'linear-gradient(87deg, #a4a4a414, rgb(77 77 77 / 27%))',
+    borderRadius: '50%',
+    transform: 'rotateZ(300deg)',
+    top: '0px',
+    [theme.breakpoints.down('md')]: {
+      display: 'none',
+    }
+  },
+  bgshape1: {
+    width: '200px',
+    height: '200px',
+    position: 'absolute',
+    clipPath: 'circle(50% at right)',
+    background: 'linear-gradient(90deg, #a4a4a414, rgb(77 77 77 / 44%))',
+    zIndex: '1',
+    right: '0px',
+    transform: 'rotateZ(90deg)',
+    bottom: '0px',
+    left: '0px',
+    [theme.breakpoints.down('md')]: {
+      display: 'none',
+    }
+  },
+  bgshape2: {
+    width: '200px',
+    height: '200px',
+    position: 'absolute',
+    clipPath: 'circle(50% at right)',
+    background: 'linear-gradient(90deg, #a4a4a414, rgb(77 77 77 / 44%))',
+    zIndex: '1',
+    left: '20%',
+    top: '0px',
+    transform: 'rotateZ(-90deg)',
+    [theme.breakpoints.down('md')]: {
+      display: 'none',
+    }
+  },
 }));
 
 const Footer = props => {
   const { pages, className, ...rest } = props;
 
   const classes = useStyles();
-
-  const landings = pages.landings;
-  const supportedPages = pages.pages;
-  const account = pages.account;
-
-  const MenuGroup = props => {
-    const { item } = props;
-    return (
-      <List disablePadding className={classes.menuItem}>
-        {item.pages.map((page, i) => (
-          <ListItem disableGutters key={i} className={classes.menuGroupItem}>
-            <Typography
-              variant="body2"
-              component={'a'}
-              href={page.href}
-              className={clsx(classes.navLink, 'submenu-item')}
-            >
-              {page.title}
-            </Typography>
-          </ListItem>
-        ))}
-      </List>
-    );
-  };
-
-  const LandingPages = () => {
-    const { services, apps, web } = landings.children;
-    return (
-      <div className={classes.menu}>
-        <div>
-          <MenuGroup item={services} />
-          <MenuGroup item={apps} />
-        </div>
-        <div>
-          <MenuGroup item={web} />
-        </div>
-      </div>
-    );
-  };
-
-  const SupportedPages = () => {
-    const {
-      career,
-      helpCenter,
-      company,
-      contact,
-      blog,
-      portfolio,
-    } = supportedPages.children;
-    return (
-      <div className={classes.menu}>
-        <div>
-          <MenuGroup item={career} />
-          <MenuGroup item={helpCenter} />
-        </div>
-        <div>
-          <MenuGroup item={company} />
-          <MenuGroup item={contact} />
-        </div>
-        <div>
-          <MenuGroup item={blog} />
-          <MenuGroup item={portfolio} />
-        </div>
-      </div>
-    );
-  };
-
-  const AccountPages = () => {
-    const { settings, signup, signin, password, error } = account.children;
-    return (
-      <div className={classes.menu}>
-        <div>
-          <MenuGroup item={settings} />
-          <MenuGroup item={signup} />
-        </div>
-        <div>
-          <MenuGroup item={signin} />
-          <MenuGroup item={password} />
-          <MenuGroup item={error} />
-        </div>
-      </div>
-    );
-  };
+ 
 
   return (
     <div {...rest} className={clsx(classes.root, className)}>
       <div className={classes.footerContainer}>
         <Grid container spacing={4}>
           <Grid item xs={12} md={8} className={classes.menuListContainer}>
+            {/* <div style={{
+              position: 'absolute'
+            }}> */}
+            <div className={classes.bgshape}></div>
+            <div className={classes.bgshape1}></div>
+            <div className={classes.bgshape2}></div>
+            {/* </div> */}
             <div style={{ padding: '20px' }}>
               <p>Developer</p>
               <ul className='bottomList'>
@@ -201,6 +172,8 @@ const Footer = props => {
                 <li>Help Center</li>
                 <li>Feedback Center</li>
               </ul>
+              
+              
             </div>
           </Grid>
 
@@ -224,7 +197,9 @@ const Footer = props => {
           </Grid>
           
         </Grid>
+
       </div>
+     
     </div>
   );
 };

@@ -41,6 +41,22 @@ const useStyles = makeStyles(theme => ({
     borderBottomRightRadius: '100%',
     borderBottom: `1px solid ${colors.grey[200]}`,
   },
+  computing_bg: {
+    '&::before': {
+      right: '500px',
+      width: '300px',
+      height: '300px',
+      display: 'block',
+      justifyContent: 'center',
+      alignItems: 'center',
+      content: '',
+      position: 'absolute',
+      background: 'linear-gradient(356deg, #cfcfcf26, #7d7d7d00)',
+      left: '-15px',
+      top: '-15px',
+      clipPath: 'circle(157px at bottom)',
+    }
+  }
 }));
 
 const Home = () => {
@@ -68,7 +84,7 @@ const Home = () => {
         <Provider data={provider_data} />
       </Section>
 
-      <Section>
+      <Section className={classes.computing_bg}>
         <Computing data={computing_data} />
       </Section>
       
