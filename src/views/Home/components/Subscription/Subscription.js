@@ -7,7 +7,7 @@ import { CardBase } from 'components/organisms';
 
 const useStyles = makeStyles(theme => ({
   cardBase: {
-    background: '#F55C21',
+    background: '#F55C21!important',
     width: '100%',
     borderRadius: '32px',
     display: 'flex',
@@ -58,13 +58,22 @@ const useStyles = makeStyles(theme => ({
     transform: 'rotate(45deg)',
     right: '25%',
     bottom: '-10px',
+  },
+  SubButton: {
+    padding: '20px',
+    height: '42px'
   }
 }));
 
 const Subscription = props => {
   const { className, ...rest } = props;
   const classes = useStyles();
+  const [isSub, setIsSub] = React.useState(false);
 
+  const subscribe = () => {
+    setIsSub(true)
+  }
+  console.log('isSub::', isSub)
   return (
     <div className={className} {...rest}>
       <CardBase
@@ -73,50 +82,53 @@ const Subscription = props => {
         data-aos="fade-up"
         className={classes.cardBase}
       >
-        <>
-          <Grid item xs={12} md={12} style={{ zIndex: '1' }}>
-            <SectionHeader
-              title={
-                <span className={classes.textWhite}>
-                  The latest ADAMoracle news
-                </span>
-              }
-              fadeUp
-              align="center"
-            />
-            <Grid container spacing={2} alignItems="center" style={{
-                    background: 'white',
-                    borderRadius: '29px'
-            }}>
-              <Grid item xs={9} sm={9}>
-                <TextField
-                    style={{
-                        backgroundColor: '#00000000'
-                    }}
-                  type="search"
-                  size="small"
-                  fullWidth
-                  label="Please enter your E-Mail address"
-                  variant="outlined"
-                />
-              </Grid>
-              <Grid item xs={3} sm={3}>
-                <Button
-                  fullWidth
-                  variant="contained"
-                  color="primary"
-                  size="large"
-                >
-                  Subscribe
-                </Button>
-              </Grid>
+        {
+          isSub ? 'You Has Subscribed' :
+          <>
+            <Grid item xs={12} md={12} style={{ zIndex: '1' }}>
+              <SectionHeader
+                title={
+                  <span className={classes.textWhite}>
+                    The latest ADAMoracle news
+                  </span>
+                }
+                fadeUp
+                align="center"
+              />
+              <Grid container spacing={2} alignItems="center" style={{background: 'white',borderRadius: '29px'}}>
+                    <Grid item xs={9} sm={9} >
+                      <TextField
+                          style={{
+                              backgroundColor: '#00000000'
+                          }}
+                        type="search"
+                        size="small"
+                        fullWidth
+                        label="Please enter your E-Mail address"
+                        variant="outlined"
+                      />
+                    </Grid>
+                    <Grid item xs={3} sm={3}>
+                      <Button 
+                          className={classes.SubButton}
+                          fullWidth
+                          variant="contained"
+                          color="primary"
+                          size="large"
+                          onClick={subscribe}
+                        >
+                        Subscribe
+                      </Button>
+                    </Grid>
+                  </Grid>
+              
             </Grid>
-          </Grid>
-          <div className={classes.bg1}></div>
-          <div className={classes.bg2}></div>
-          <div className={classes.bg3}></div>
-          <div className={classes.bg4}></div>
-        </>
+            <div className={classes.bg1}></div>
+            <div className={classes.bg2}></div>
+            <div className={classes.bg3}></div>
+            <div className={classes.bg4}></div>
+          </>
+        }
       </CardBase>
     </div>
   );

@@ -100,7 +100,7 @@ const Connect = props => {
   ];
 
   return (
-    <div className={classes.bgbox} {...rest}>
+    <div className={classes.bgbox} {...rest} data-aos="fade-up">
       <SectionHeader
         title={
           <span className={classes.textWhite}>
@@ -109,7 +109,7 @@ const Connect = props => {
         } 
         data-aos="fade-up"
       />
-      <Grid container className={classes.container }>
+      <Grid container className={classes.container } data-aos="fade-up">
           <img className={ classes.mainImg } alt="..." src="/assets/ad-bg.png" width="auto" height="auto"></img>
       </Grid>
     </div>

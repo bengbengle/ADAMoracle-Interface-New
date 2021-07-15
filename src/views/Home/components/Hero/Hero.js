@@ -9,9 +9,9 @@ const useStyles = makeStyles(theme => ({
     maxWidth: 'initial'
   },
   image: {
-    marginLeft: '5%',
-    marginTop: '-10rem',
-    width: '80%',
+    marginLeft: '2%',
+    marginTop: '-20%',
+    width: '90%',
     transition: 'box-shadow .25s ease,transform .25s ease,-webkit-transform .25s ease',
     '&:hover': {
       transform: 'translate3d(0,-5px,0)',
@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: '60px!important',
     [theme.breakpoints.down('md')]: {
       marginTop: '20px',
-      paddingLeft: 'initial',
+      paddingLeft: '10px!important',
     }
   },
   rightcontainer: {

@@ -28,7 +28,8 @@ const useStyles = makeStyles(theme => ({
   },
   toolbar: {
     zIndex: 999,
-    maxWidth: theme.layout.contentWidth,
+    // maxWidth: theme.layout.contentWidth,
+    maxWidth: '95%',
     width: '100%',
     margin: '0 auto',
     minHeight: '100px',
@@ -36,6 +37,9 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('sm')]: {
       padding: theme.spacing(0, 8),
     },
+    [theme.breakpoints.down('md')]: {
+      maxWidth: theme.layout.contentWidth,
+    }
   },
   navLink: {
     '&:hover': {
@@ -86,10 +90,10 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.primary.dark,
   },
   logoContainer: {
-    width: 130,
+    width: 145,
     marginLeft: 'calc(50% - 90px)',
     [theme.breakpoints.up('md')]: {
-      width: 130,
+      width: 145,
       marginLeft: '0px',
     },
   },
