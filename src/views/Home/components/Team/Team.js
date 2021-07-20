@@ -24,24 +24,6 @@ const useStyles = makeStyles(theme => ({
     borderTopLeftRadius: '50px',
     borderTopRightRadius: '50px'
   },
-  blogTitle: {
-    fontWeight: 700,
-  },
-  tags: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-  },
-  tag: {
-    fontWeight: 700,
-    margin: theme.spacing(0, 1, 1, 0),
-  },
-  author: {
-    marginTop: theme.spacing(1),
-    [theme.breakpoints.up('md')]: {
-      marginTop: theme.spacing(2),
-    },
-  },
   title: {
     fontWeight: 'bold',
     color: '#3C3C3C',
@@ -49,12 +31,6 @@ const useStyles = makeStyles(theme => ({
     fontSize: '52px',
     display: 'inline-block',
     height: '80px',
-  },
-  subTitle: {
-    height: '10px',
-    fontSize: '12px!important',
-    fontWeight: '500',
-    color: '#F55C21!important'
   },
   descriptionCta: {
     marginBottom: theme.spacing(3),
@@ -86,19 +62,26 @@ const Team = props => {
   const { data, className, ...rest } = props;
   const classes = useStyles();
 
-  const BlogMediaContent = props => (
-    <>
-      <Image
-        {...props}
-        className={classes.image}
-        lazyProps={{ width: '100%', height: '100%' }}
-      />
-      <div className={classes.bottomTips}>
-        <div className={classes.bottomtitle}> Ahmed Ebrahim</div>
-        <div className='bottomDesc'>ADAMoracle founder and CEO Ahmed Ebrahim</div>
-      </div>
-    </>
-  );
+  console.log('data::', data, 'props::', props)
+
+  const BlogMediaContent = props => {
+
+    console.log(props)
+    const { title, subtitle, description } = props
+    return (
+      <>
+        <Image
+          {...props}
+          className={classes.image}
+          lazyProps={{ width: '100%', height: '100%' }}
+        />
+        <div className={classes.bottomTips}>
+          <div className={classes.bottomtitle}> {title}</div>
+          <div className='bottomDesc'>{ subtitle }</div>
+        </div>
+      </>
+    );
+  }
 
 
   return (
@@ -111,7 +94,7 @@ const Team = props => {
           color: 'textPrimary',
           className: classes.title,
         }}
-        primaryCta= {
+        primaryCta={
           ''
         }
         className={classes.descriptionCta}
@@ -119,24 +102,26 @@ const Team = props => {
       />
       <Grid container spacing={5}>
         {data.map((item, index) => (
-          <Grid item xs={12} sm={12} md={4} key={index} data-aos="fade-up"  spacing={10}
-          style={{
-            backgroundColor: '#00000000'
-          }}>
+          <Grid item xs={12} sm={12} md={4} key={index} data-aos="fade-up" spacing={10}
+            style={{
+              backgroundColor: '#00000000'
+            }}>
             <CardProduct
               withShadow
               liftUp
               className={classes.cardProduct}
               mediaContent={
-                <BlogMediaContent {...item.cover} alt={item.title} />
+                <BlogMediaContent {...item.cover} title={item.title} subtitle={item.subtitle} alt={item.title} />
               }
               cardContent={
                 <ul style={{
                   color: '#999999'
                 }}>
-                  <li>Personal profile -XXXXXXXXX</li>
-                  <li>Personal profile -XXXXXXXXX</li>
-                  <li>Personal profile -XXXXXXXXX</li>
+                  <li>
+                    {
+                      item.description
+                    }
+                  </li>
                 </ul>
               }
             />

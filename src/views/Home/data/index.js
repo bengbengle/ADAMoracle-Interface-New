@@ -382,16 +382,10 @@ export const team_data = [
       src: '/assets/p-1.png',
       srcSet: '/assets/p-1.png 2x',
     },
-    title: 'Adidas will release your favourite shoes',
+    title: 'Ahmed Ebrahim',
     subtitle:
-      'Get your favourite adidas shoes, clothing & accessories at the official website! adidas Training.',
-    author: {
-      photo: {
-        src: 'assets/video-1.png',
-        srcSet: '/assets/1.png 2x',
-      },
-      name: 'Akachi Luccini',
-    },
+      'ADAMoracle founder and CEO Ahmed Ebrahim',
+    description: 'Ahmed Ebrahim has an MBA in international finance and investment and has a deep understanding of financial planning, accounting, analysis and investment. In 2018, he was awarded by National Development Bank, and successfully invested in plenty of blockchain projects.',
     date: '04 Aug',
     tags: [],
   },
@@ -400,16 +394,10 @@ export const team_data = [
       src: '/assets/p-2.png',
       srcSet: '/assets/p-2.png 2x',
     },
-    title: "LARQ | World's First Self-cleaning Water Bottle‎",
+    title: "Christopher Quet‎",
     subtitle:
-      "A self-cleaning water bottle that'll help you reach your hydration goal. Neutralizes up to 99%* of harmful, odor-causing bacteria using UV-C light.",
-    author: {
-      photo: {
-        src: '/assets/2.png',
-        srcSet: '/assets/2.png 2x 2x',
-      },
-      name: 'Kate Segelson',
-    },
+      "ADAMoracle Co-founder and CMO Christopher Quet",
+    description: 'Christopher Quet graduated from the University of Lyon, France, majoring in international trade. With 22 years of working experience, Christopher conduces business cooperation in more than 80 countries to expand the business, and provide unique customized solutions for multinational enterprises. Christopher can adapt to a specific market, has rich experience in sales, marketing, and team management, and has successfully established and managed an international subsidiary network.',
     date: '04 Aug',
     tags: [],
   },
@@ -419,16 +407,10 @@ export const team_data = [
       src: '/assets/p-3.png',
       srcSet: '/assets/p-3.png 2x',
     },
-    title: "LARQ | World's First Self-cleaning Water Bottle‎",
+    title: "Olga Petrovska‎",
     subtitle:
-      "A self-cleaning water bottle that'll help you reach your hydration goal. Neutralizes up to 99%* of harmful, odor-causing bacteria using UV-C light.",
-    author: {
-      photo: {
-        src: '/assets/2.png',
-        srcSet: '/assets/2.png 2x 2x',
-      },
-      name: 'Kate Segelson',
-    },
+      "ADAMoracle Co-founder and COO Olga Petrovska",
+    description: 'Olga petrovska comes from Ukraine and majored in English and literature at Uman National Language University. Guided by her two brothers, Olga decided to run a commercial business. She has been working at multinational enterprises in the United States for many years, then studied blockchain in the United Arab Emirates for eight years, and became an expert in blockchain-related projects. She firmly believes that science and technology can provide better services, “blockchain technology will be the leading innovation which will guide the world’s major industries into the future era.”',
     date: '04 Aug',
     tags: [],
   },
