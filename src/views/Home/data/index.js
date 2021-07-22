@@ -340,14 +340,14 @@ export const computing_data = [
 export const news_data = [
   {
     cover: {
-      src: '/assets/1.png', 
+      src: '/assets/left.png', 
     },
     title: "Let's start the oracle 3.0 era together with co-Founder&CMO Christopher Quet! ",
     url: 'https://www.youtube.com/watch?v=l6q0I0SO5MU&t=29s'
   },
   {
     cover: {
-      src: '/assets/2.png',
+      src: '/assets/right.png',
     },
     title: "A depth-conversation with ADAMoracle",
     url: 'https://youtu.be/he7kwR6vcBw'

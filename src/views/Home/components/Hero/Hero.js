@@ -115,7 +115,7 @@ const useStyles = makeStyles(theme => ({
     height: '5rem',
     display: 'inline',
     position: 'absolute',
-    fontSize: '120px',
+    fontSize: '90px',
     overflowX: 'visible',
     textAlign: 'left',
     fontWeight: '800',

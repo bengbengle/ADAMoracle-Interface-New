@@ -63,6 +63,11 @@ const useStyles = makeStyles(theme => ({
       marginBottom: theme.spacing(4),
     },
   },
+  imgContent: {
+    '&:hover': {
+      cursor: 'pointer'
+    },
+  }
 }));
 
 const News = props => {
@@ -119,12 +124,12 @@ const News = props => {
             backgroundColor: '#00000000'
           }}>
             <CardProduct
-              onClick= {() => redirectTo(item.url)}
+              
               withShadow
               liftUp
               className={classes.cardProduct}
               mediaContent={
-                <BlogMediaContent {...item.cover} alt={item.title} />
+                <BlogMediaContent {...item.cover} alt={item.title} onClick= {() => redirectTo(item.url)} className={classes.imgContent} />
               }
               cardContent={
                 <BlogContent
