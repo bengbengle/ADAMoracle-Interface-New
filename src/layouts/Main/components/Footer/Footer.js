@@ -160,7 +160,7 @@ const Footer = props => {
             <div className={classes.bgshape2}></div>
             {/* </div> */}
             <div style={{ padding: '20px' }}>
-              {/* <p>Developer</p>
+              <p>Developer</p>
               <ul className='bottomList'>
                 <li>Doc</li>
                 <li>Developer resouces</li>
@@ -172,7 +172,7 @@ const Footer = props => {
                 <li>Ecological Governance Manual</li>
                 <li>Help Center</li>
                 <li>Feedback Center</li>
-              </ul> */}
+              </ul>
               
               
             </div>

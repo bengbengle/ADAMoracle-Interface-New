@@ -66,7 +66,7 @@ const Advantages = props => {
         } 
         data-aos="fade-up"
       />
-      <Grid container spacing={isMd ? 4 : 2}>
+      <Grid container spacing={isMd ? 10 : 2}>
         {data.map((item, index) => (
           <Grid
             key={index}

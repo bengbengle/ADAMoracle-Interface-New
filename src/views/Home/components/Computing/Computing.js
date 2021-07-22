@@ -70,7 +70,7 @@ const useStyles = makeStyles(theme => ({
   },
   bgshape1: {
     top: '200px',
-    right: '-200px',
+    right: '-20px',
     width: '200px',
     height: '200px',
     position: 'absolute',
@@ -78,7 +78,10 @@ const useStyles = makeStyles(theme => ({
     clipPath: 'circle(50% at right)',
     [theme.breakpoints.down('md')]: {
       display: 'none',
-    }
+    },
+    // [theme.breakpoints.down('lg')]: {
+    //   display: 'none',
+    // }
   }
 }));
 

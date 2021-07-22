@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import { Button, Typography, Grid } from '@material-ui/core';
+import { Button, Typography, Grid, Paper  } from '@material-ui/core';
 import { Image } from 'components/atoms';
 import { DescriptionCta } from 'components/molecules';
 import { CardProduct } from 'components/organisms';
+import { pink } from '@material-ui/core/colors';
+import Collapse from '@material-ui/core/Collapse';
 
 const useStyles = makeStyles(theme => ({
   cardProduct: {
@@ -21,7 +23,10 @@ const useStyles = makeStyles(theme => ({
   },
   image: {
     objectFit: 'cover',
-    borderRadius: '45px'
+    borderRadius: '45px',
+    '&:hover': {
+      cursor: 'pointer',
+    },
   },
   blogTitle: {
     fontWeight: 700,
@@ -85,6 +90,12 @@ const News = props => {
   const BlogContent = props => {
     return (
       <div >
+         {/* <Collapse in={true}>
+          <Paper elevation={4} className={'classes.paper'}>
+            {props.title}
+          </Paper>
+        </Collapse> */}
+
         <Typography
           variant="h6"
           color="textPrimary"
@@ -129,7 +140,8 @@ const News = props => {
               liftUp
               className={classes.cardProduct}
               mediaContent={
-                <BlogMediaContent {...item.cover} alt={item.title} onClick= {() => redirectTo(item.url)} className={classes.imgContent} />
+                <BlogMediaContent {...item.cover} alt={item.title} onClick= {() => redirectTo(item.url)} 
+                className={classes.imgContent} />
               }
               cardContent={
                 <BlogContent

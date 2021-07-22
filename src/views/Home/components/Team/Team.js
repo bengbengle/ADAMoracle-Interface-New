@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import { Button, Typography, Grid } from '@material-ui/core';
+import { Button, Typography, Grid, Paper } from '@material-ui/core';
 import { Image } from 'components/atoms';
 import { DescriptionCta } from 'components/molecules';
 import { CardProduct } from 'components/organisms';
-
+import Collapse from '@material-ui/core/Collapse';
+// import { Button, Typography, Grid, Paper  } from '@material-ui/core';
 const useStyles = makeStyles(theme => ({
   cardProduct: {
     display: 'flex',
@@ -58,6 +59,29 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+// Hook
+const useHover = () => {
+  const [value, setValue] = useState(false);
+  const ref = useRef(null);
+  const handleMouseOver = () => setValue(true);
+  const handleMouseOut = () => setValue(false);
+  useEffect(
+    () => {
+      const node = ref.current;
+      if (node) {
+        node.addEventListener("mouseover", handleMouseOver);
+        node.addEventListener("mouseout", handleMouseOut);
+        return () => {
+          node.removeEventListener("mouseover", handleMouseOver);
+          node.removeEventListener("mouseout", handleMouseOut);
+        };
+      }
+    },
+    [ref.current] // Recall only if ref changes
+  );
+  return [ref, value];
+}
+
 const Team = props => {
   const { data, className, ...rest } = props;
   const classes = useStyles();
@@ -74,13 +98,52 @@ const Team = props => {
           {...props}
           className={classes.image}
           lazyProps={{ width: '100%', height: '100%' }}
+
         />
         <div className={classes.bottomTips}>
           <div className={classes.bottomtitle}> {title}</div>
-          <div className='bottomDesc'>{ subtitle }</div>
+          <div className='bottomDesc'>{subtitle}</div>
+          <div className='bottomDesc'>
+          </div>
         </div>
+        {/*           
+        <Collapse in={true} >
+           
+        </Collapse> */}
       </>
     );
+  }
+
+  const BlogGrid = props => {
+    const [hoverRef, isHovered] = useHover();
+
+    const { item, index } = props
+    return (
+      <Grid item xs={12} sm={12} md={4} key={index} data-aos="fade-up" spacing={10} ref={hoverRef}
+        style={{
+          backgroundColor: '#00000000'
+        }}>
+        <CardProduct
+          withShadow
+          liftUp
+          className={classes.cardProduct}
+          mediaContent={
+            <BlogMediaContent {...item.cover} title={item.title} subtitle={item.subtitle} alt={item.title}/>
+          }
+          cardContent={
+            <Collapse in={ isHovered } >
+            <span style={{
+                color: '#878787'
+              }}>
+                {
+                  item.description
+                }
+              </span>
+            </Collapse>
+          }
+        />
+      </Grid>
+    )
   }
 
 
@@ -102,30 +165,7 @@ const Team = props => {
       />
       <Grid container spacing={5}>
         {data.map((item, index) => (
-          <Grid item xs={12} sm={12} md={4} key={index} data-aos="fade-up" spacing={10}
-            style={{
-              backgroundColor: '#00000000'
-            }}>
-            <CardProduct
-              withShadow
-              liftUp
-              className={classes.cardProduct}
-              mediaContent={
-                <BlogMediaContent {...item.cover} title={item.title} subtitle={item.subtitle} alt={item.title} />
-              }
-              cardContent={
-                <ul style={{
-                  color: '#999999'
-                }}>
-                  <li>
-                    {
-                      item.description
-                    }
-                  </li>
-                </ul>
-              }
-            />
-          </Grid>
+          <BlogGrid item={item} index={index} ></BlogGrid>
         ))}
       </Grid>
     </div>
