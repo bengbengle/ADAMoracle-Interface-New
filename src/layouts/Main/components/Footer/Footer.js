@@ -8,6 +8,7 @@ import {
   Grid,
   List,
   ListItem,
+  Avatar
 } from '@material-ui/core';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
@@ -179,7 +180,7 @@ const Footer = props => {
 
           <Grid item xs={12} md={4}>
             <List disablePadding>
-              <ListItem disableGutters>
+              {/* <ListItem disableGutters>
                 <IconButton className={classes.socialIcon}>
                   <FacebookIcon className={classes.icon} />
                 </IconButton>
@@ -192,7 +193,26 @@ const Footer = props => {
                 <IconButton className={classes.socialIcon}>
                   <PinterestIcon className={classes.icon} />
                 </IconButton>
+              </ListItem> */}
+              {/* <List> */}
+              <ListItem disableGutters className={classes.icons}>
+                <IconButton className={classes.socialIcon} href='https://twitter.com/ADAM_Oracle' target='_blank'>
+                  <Avatar alt="Remy Sharp" src="/assets/twitter.png" />
+                </IconButton>
+                <IconButton className={classes.socialIcon} href='https://www.youtube.com/channel/UCwAf3rsQIml0X0CdYbEcfMw' target='_blank'>
+                  <Avatar alt="Remy Sharp" src="/assets/youtube.png" />
+                </IconButton>
+                <IconButton className={classes.socialIcon} href='https://t.me/adamoracleEnglish' target='_blank'>
+                  <Avatar alt="Remy Sharp" src="/assets/telegram.png" />
+                </IconButton>
+                <IconButton className={classes.socialIcon} href='https://github.com/smartcontractadam' target='_blank'>
+                  <Avatar alt="Remy Sharp" src="/assets/github.png" />
+                </IconButton>
+                <IconButton className={classes.socialIcon} href='https://adamoracle.medium.com' target='_blank'>
+                  <Avatar alt="Medium" src="/assets/medium.png" />
+                </IconButton>
               </ListItem>
+            {/* </List> */}
             </List>
           </Grid>
           

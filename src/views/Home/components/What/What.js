@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
     width: '321px',
     height: '100px',
     fontSize: '2.7rem',
-    fontFamily: 'Alibaba PuHuiTi',
+    fontFamily: "'AlibabaPuHuiTi-Heavy'",
     fontWeight: 800,
     color: 'rgb(112 112 112)',
     marginLeft: '30px',

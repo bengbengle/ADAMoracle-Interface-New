@@ -1,0 +1,196 @@
+@font-face {
+    font-family: 'AlibabaPuHuiTi';
+    src: url('./alibabaFont/zh-cn/Alibaba-PuHuiTi-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AlibabaPuHuiTi-Bold';
+    src: url('./alibabaFont/zh-cn/Alibaba-PuHuiTi-Bold.otf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AlibabaPuHuiTi-Light';
+    src: url('./alibabaFont/zh-cn/Alibaba-PuHuiTi-Light.otf');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AlibabaPuHuiTi-Medium';
+    src: url('./alibabaFont/zh-cn/Alibaba-PuHuiTi-Medium.otf');
+    font-weight: Medium;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AlibabaPuHuiTi-Heavy';
+    src: url('./alibabaFont/zh-cn/Alibaba-PuHuiTi-Heavy.otf');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AlibabaSans-Normal-Italics';
+    src: url('./alibabaFont/AlibabaSans/ltalics/AlibabaSans-Italic.otf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'AlibabaSans-Bold-Italics';
+    src: url('./alibabaFont/AlibabaSans/ltalics/AlibabaSans-BoldItalic.otf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'AlibabaSans-light-Italics';
+    src: url('./alibabaFont/AlibabaSans/ltalics/AlibabaSans-LightItalic.otf');
+    font-weight: lighter;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'AlibabaSans-Heavy-Italics';
+    src: url('./alibabaFont/AlibabaSans/ltalics/AlibabaSans-HeavyItalic.otf');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'AlibabaSans-Medium-Italics';
+    src: url('./alibabaFont/AlibabaSans/ltalics/AlibabaSans-MediumItalic.otf');
+    font-weight: Medium;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'AlibabaSans-Normal';
+    src: url('./alibabaFont/AlibabaSans/Norma/AlibabaSans-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AlibabaSans-light';
+    src: url('./alibabaFont/AlibabaSans/Norma/AlibabaSans-Light.otf');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AlibabaSans-Medium';
+    src: url('./alibabaFont/AlibabaSans/Norma/AlibabaSans-Medium.otf');
+    font-weight: Medium;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AlibabaSans-Bold';
+    src: url('./alibabaFont/AlibabaSans/Norma/AlibabaSans-Bold.otf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AlibabaSans-Heavy';
+    src: url('./alibabaFont/AlibabaSans/Norma/AlibabaSans-Heavy.otf');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AlibabaSans-Black';
+    src: url('./alibabaFont/AlibabaSans/Norma/AlibabaSans-Black.otf');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+.AlibabaPuHuiTi-Light {
+    font-family: AlibabaPuHuiTi-Light;
+}
+
+.AlibabaPuHuiTi {
+    font-family: AlibabaPuHuiTi;
+}
+
+.AlibabaPuHuiTi-Medium {
+    font-family: AlibabaPuHuiTi-Medium;
+}
+
+.AlibabaPuHuiTi-Bold {
+    font-family: AlibabaPuHuiTi-Bold;
+}
+
+.AlibabaPuHuiTi-Heavy {
+    font-family: AlibabaPuHuiTi-Heavy;
+}
+
+.AlibabaSans-light-Italics {
+    font-family: AlibabaSans-light-Italics;
+}
+
+.AlibabaSans-Normal-Italics {
+    font-family: AlibabaSans-Normal-Italics;
+}
+
+.AlibabaSans-Medium-Italics {
+    font-family: AlibabaSans-Medium-Italics;
+}
+
+.AlibabaSans-Bold-Italics {
+    font-family: AlibabaSans-Bold-Italics;
+}
+
+.AlibabaSans-Heavy-Italics {
+    font-family: AlibabaSans-Heavy-Italics;
+}
+
+.AlibabaSans-light {
+    font-family: AlibabaSans-light;
+}
+
+.AlibabaSans-Normal {
+    font-family: AlibabaSans-Normal;
+}
+
+.AlibabaSans-Medium {
+    font-family: AlibabaSans-Medium;
+}
+
+.AlibabaSans-Bold {
+    font-family: AlibabaSans-Bold;
+}
+
+.AlibabaSans-Heavy {
+    font-family: AlibabaSans-Heavy;
+}
+
+.AlibabaSans-Black {
+    font-family: AlibabaSans-Black;
+}
+
+.otherfont {
+    font-family: 微软雅黑;
+}
+
+.alibabafont-body {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*中小屏移动设备*/
+@media only screen and (max-width: 640px) {
+    .alibabafont-body {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+}

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { useMediaQuery, Grid, Button, Typography, ListItem, IconButton, List, SvgIcon, Avatar } from '@material-ui/core';
 import { Image } from 'components/atoms';
+import clsx from 'clsx';
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -108,19 +109,20 @@ const useStyles = makeStyles(theme => ({
     }
   },
   title: {
-    top: '-2rem',
+    top: '-4rem',
     paddingLeft: '10%',
     color: '#FFFFFF',
     height: '5rem',
     display: 'inline',
     position: 'absolute',
-    fontSize: '75px',
+    fontSize: '120px',
     overflowX: 'visible',
     textAlign: 'left',
     fontWeight: '800',
     width: '100%',
     [theme.breakpoints.down('md')]: {
-      'font-size': '50px',
+      top: '-2rem',
+      'font-size': '60px',
       overflowX: 'visible',
       fontWeight: '800',
       width: '100%',
@@ -196,30 +198,43 @@ const Hero = props => {
     defaultMatches: true
   })
  
+  const scrollToComputingNode = (event) => {
+    const anchor = (event.target.ownerDocument || document).querySelector('#become-computing-node');
+
+    console.log(anchor)
+    if (anchor) {
+      anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  const navigatorTo = (url) => {
+    console.log(url)
+    window.open(url, '_blank ')
+  }
+
   return (
     <div className={classes.container} {...rest}>
       <Grid container justify="space-between" spacing={isMd ? 4 : 2}>
         <Grid item xs={0} md={1} data-aos={'fade-up'} className={classes.leftcontainer}>
-          <div className={classes.lefttips}>
+          <div className={clsx(classes.lefttips, 'AlibabaPuHuiTi-Bold')}>
             ADAMoracle 3.0 {' '}
           </div>
           <List>
             <ListItem disableGutters className={classes.icons}>
-              <IconButton className={classes.socialIcon}>
-                <Avatar alt="Remy Sharp" src="/assets/reddit.png" />
+              <IconButton className={classes.socialIcon} href='https://twitter.com/ADAM_Oracle' target='_blank'>
+                <Avatar alt="Remy Sharp" src="/assets/twitter.png" />
               </IconButton>
-              <IconButton className={classes.socialIcon}>
+              <IconButton className={classes.socialIcon} href='https://www.youtube.com/channel/UCwAf3rsQIml0X0CdYbEcfMw' target='_blank'>
                 <Avatar alt="Remy Sharp" src="/assets/youtube.png" />
               </IconButton>
-              <IconButton className={classes.socialIcon}>
+              <IconButton className={classes.socialIcon} href='https://t.me/adamoracleEnglish' target='_blank'>
                 <Avatar alt="Remy Sharp" src="/assets/telegram.png" />
               </IconButton>
-
-              <IconButton className={classes.socialIcon}>
-                <Avatar alt="Remy Sharp" src="/assets/kakao.png" />
+              <IconButton className={classes.socialIcon} href='https://github.com/smartcontractadam' target='_blank'>
+                <Avatar alt="Remy Sharp" src="/assets/github.png" />
               </IconButton>
-              <IconButton className={classes.socialIcon}>
-                <Avatar alt="Remy Sharp" src="/assets/discord.png" />
+              <IconButton className={classes.socialIcon} href='https://adamoracle.medium.com' target='_blank'>
+                <Avatar alt="Medium" src="/assets/medium.png" />
               </IconButton>
             </ListItem>
           </List>
@@ -227,7 +242,7 @@ const Hero = props => {
 
         <Grid item xs={12} md={5} data-aos={'fade-up'} className={classes.centercontainer}>
           <div className={classes.mosha }>
-            <p className={classes.title} >Oracle 3.0</p>
+            <p className={clsx(classes.title, 'AlibabaPuHuiTi-Heavy')} >Oracle 3.0</p>
             <div  className={classes.content} >
               <p>
               ADAMoracle is the first decentralized oracle
@@ -244,30 +259,31 @@ const Hero = props => {
           <div className={classes.rightcontainer}>
             <List>
               <ListItem disableGutters className={classes.icons}>
-                <IconButton className={classes.socialIcon}>
-                  <Avatar alt="Remy Sharp" src="/assets/reddit.png" />
+                <IconButton className={classes.socialIcon} href='https://twitter.com/ADAM_Oracle' target='_blank'>
+                  <Avatar alt="Remy Sharp" src="/assets/twitter.png" />
                 </IconButton>
-                <IconButton className={classes.socialIcon}>
+                <IconButton className={classes.socialIcon} href='https://www.youtube.com/channel/UCwAf3rsQIml0X0CdYbEcfMw' target='_blank'>
                   <Avatar alt="Remy Sharp" src="/assets/youtube.png" />
                 </IconButton>
-                <IconButton className={classes.socialIcon}>
+                <IconButton className={classes.socialIcon} href='https://t.me/adamoracleEnglish' target='_blank'>
                   <Avatar alt="Remy Sharp" src="/assets/telegram.png" />
                 </IconButton>
-
-                <IconButton className={classes.socialIcon}>
-                  <Avatar alt="Remy Sharp" src="/assets/kakao.png" />
+                <IconButton className={classes.socialIcon} href='https://github.com/smartcontractadam' target='_blank'>
+                  <Avatar alt="Remy Sharp" src="/assets/github.png" />
                 </IconButton>
-                <IconButton className={classes.socialIcon}>
-                  <Avatar alt="Remy Sharp" src="/assets/discord.png" />
+                <IconButton className={classes.socialIcon} href='https://adamoracle.medium.com' target='_blank'>
+                  <Avatar alt="Medium" src="/assets/medium.png" />
                 </IconButton>
               </ListItem>
             </List>
           </div>
           <div className={classes.buttongroups} >
-            <Button color="primary" variant="contained" size="large">
+            <Button color="primary" variant="contained" size="large" onClick={ scrollToComputingNode }>
               Develope with ADAMoracle
             </Button>
-            <Button size="large" variant="outlined" color="primary"  className={ classes.marginLeft } >
+            <Button size="large" variant="outlined" color="primary"  className={ classes.marginLeft } onClick={
+              () => window.open('/assets/files/adamoracle_whitepaper.pdf', '_blank')
+            }>
               White paper
             </Button>
           </div>

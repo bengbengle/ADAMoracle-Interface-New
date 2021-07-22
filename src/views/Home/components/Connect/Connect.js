@@ -15,7 +15,13 @@ const useStyles = makeStyles(theme => ({
     fontFamily: "Alibaba PuHuiTi",
     fontWeight: 800,
     color: 'rgb(60, 60, 60)',
-    marginLeft: '30px'
+    marginLeft: '30px',
+    fontFamily: "'AlibabaPuHuiTi-Heavy'",
+    color: '#3c3c3c',
+    fontSize: '80px',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '50px',
+    },
   },
   avatar: {
     width: 190,
@@ -108,7 +114,7 @@ const Connect = props => {
       <SectionHeader
         title={
           <span className={classes.textWhite}>
-            Connect real world data and blockchain system
+            Connect real world data with blockchain system
           </span>
         } 
         data-aos="fade-up"

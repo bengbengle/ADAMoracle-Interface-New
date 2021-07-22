@@ -26,6 +26,7 @@ const useStyles = makeStyles(theme => ({
     marginLeft: '40px',
     inlineHeight: '43px',
     whiteSpace: 'nowrap',
+    fontFamily: "'AlibabaPuHuiTi-Heavy'",
     [theme.breakpoints.down('sm')]: {
       marginLeft: '10px',
       fontSize: '32px',
@@ -57,7 +58,8 @@ const useStyles = makeStyles(theme => ({
   gridbox: {
     padding: '150px',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    padding: '27px!important'
   }
 }));
 
@@ -75,7 +77,7 @@ const Provider = props => {
     alt: '...',
   }
   return (
-    <div className={className} data-aos="fade-up" {...rest}>
+    <div className={className} data-aos="fade-up" {...rest} id='become-data-provider'>
       <SectionHeader
         title={
           <>
@@ -152,9 +154,14 @@ const Provider = props => {
               />
             </Grid>
             <Grid item container justify="center" xs={12} sm={12} md={6} style={{
-              padding: '50px' 
+              padding: '50px',
+              paddingRight: '116px' 
             }}>
-              <Image src={item.illustration} alt={item.title} />
+              <Image src={item.illustration} alt={item.title} style={{
+                // 'object-fit': 'contain',
+                //   height: '435px',
+                //   width: 'auto'
+              }} />
             </Grid>
           </Grid>
         ))}

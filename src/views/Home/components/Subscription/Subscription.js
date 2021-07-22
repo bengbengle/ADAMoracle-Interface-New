@@ -89,7 +89,7 @@ const Subscription = props => {
               <SectionHeader
                 title={
                   <span className={classes.textWhite}>
-                    The latest ADAMoracle news
+                    The Latest ADAMoracle News
                   </span>
                 }
                 fadeUp

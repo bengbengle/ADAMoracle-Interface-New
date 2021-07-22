@@ -11,11 +11,11 @@ html {
   overflow-y: scroll;
 }
 
+
 body {
   height: 100%;
   font-size: 18px!important;
 }
-
 
 a {
   text-decoration: none;
@@ -36,7 +36,7 @@ main {
 .MuiButtonBase-root {
   border-radius: 37px!important;
   color: #ffffff!important;
-  height: 74px;
+  height: 56px;
   text-transform: inherit!important;
 }
 .MuiButton-containedPrimary {
@@ -78,7 +78,7 @@ main {
 }
 .MuiPaper-root {
   color: #ffffff!important;
-  /* background-color: #333333!important; */
+  background: 'linear-gradient(225deg, #1d192a, #000000c2)';
 }
 
  
@@ -109,6 +109,7 @@ main {
 .MuiTypography-h5 {
   font-size: 26px!important;
   height: 21px!important;
+  font-family: 'AlibabaPuHuiTi-Heavy'!important
 }
 
 .bottomList {
@@ -133,16 +134,23 @@ main {
 .sectionBox div h5 .titleDot {
   background: #FF6B22;
   width: 12px;
-  height: 48px;
+  height: 65px;
   margin-right: 20px;
 } 
 .sectionBox div h5 {
-  font-size: 26px;
   font-weight: 800;
-  color: #434343;
-  margin-bottom: 15px;
+  color: #434343!important;
+  margin-bottom: 25px;
+  max-width: 74%;
+  font-size: 35px!important;
+  margin-top: 30px;
 }
 
+@media (max-width: 996px){
+  .sectionBox div h5 {
+    max-width: 100%;
+  }
+}
 
 @keyframes turn{
   0%{-webkit-transform:rotate(0deg);}
@@ -151,3 +159,8 @@ main {
   75%{-webkit-transform:rotate(270deg);}
   100%{-webkit-transform:rotate(360deg);}
 }
+
+
+
+
+

@@ -21,6 +21,7 @@ const useStyles = makeStyles(theme => ({
   },
   image: {
     objectFit: 'cover',
+    borderRadius: '45px'
   },
   blogTitle: {
     fontWeight: 700,
@@ -76,41 +77,25 @@ const News = props => {
     />
   );
 
-  const BlogContent = props => (
-    <div>
-      <div className={classes.tags}>
-        {props.tags.map((item, index) => (
-          <Typography
-            variant="overline"
-            color="primary"
-            className={classes.tag}
-            key={index}
-          >
-            {item}
-          </Typography>
-        ))}
+  const BlogContent = props => {
+    return (
+      <div >
+        <Typography
+          variant="h6"
+          color="textPrimary"
+          className={classes.blogTitle}
+          align="center"
+        >
+          {props.title}
+        </Typography>
       </div>
-      <Typography
-        variant="h6"
-        color="textPrimary"
-        className={classes.blogTitle}
-        align="center"
-      >
-        {props.title}
-      </Typography>
-      <Typography
-        variant="body2"
-        color="textPrimary"
-        className={classes.author}
-        align="center"
-      >
-        <i>
-          {props.author.name} - {props.date}
-        </i>
-      </Typography>
-    </div>
-  );
+    );
+  }
 
+
+  const redirectTo = (url) => {
+    window.open(url, '_blank')
+  }
   return (
     <div className={className} {...rest}>
       <DescriptionCta
@@ -123,7 +108,7 @@ const News = props => {
         }}
         className={classes.descriptionCta}
         data-aos="fade-up"
-        subtitle="The latest ADAMoracle news"
+        subtitle="The Latest ADAMoracle News"
         subtitleProps={{
           className: classes.subTitle
         }}
@@ -134,6 +119,7 @@ const News = props => {
             backgroundColor: '#00000000'
           }}>
             <CardProduct
+              onClick= {() => redirectTo(item.url)}
               withShadow
               liftUp
               className={classes.cardProduct}

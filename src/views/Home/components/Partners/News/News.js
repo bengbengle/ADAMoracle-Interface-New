@@ -123,7 +123,7 @@ const News = props => {
         }}
         className={classes.descriptionCta}
         data-aos="fade-up"
-        subtitle="The latest ADAMoracle news"
+        subtitle="The Latest ADAMoracle News"
         subtitleProps={{
           className: classes.subTitle
         }}

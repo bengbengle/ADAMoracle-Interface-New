@@ -12,7 +12,8 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 800,
     fontSize: '52px',
     display: 'inline-block',
-    height: '120px'
+    height: '120px',
+    fontFamily: "'AlibabaPuHuiTi-Heavy'",
   },
   avatar: {
     width: 70,
@@ -20,6 +21,14 @@ const useStyles = makeStyles(theme => ({
     borderRadius: 0,
     background: 'transparent',
 
+  },
+  imgbg: {
+    width: '300px',
+    height: '50px',
+    background: '#2c2c2c85',
+    position: 'relative',
+    marginTop: '-25px',
+    zIndex: '-1'
   },
   descriptionListIcon: {
     '& .description-list-icon__title': {
@@ -50,9 +59,10 @@ const Advantages = props => {
     <div className={className} {...rest}>
       <SectionHeader
         title={
-          <span className={classes.textWhite}>
+          <div className={classes.textWhite}>
             Advantages
-          </span>
+            <div className={classes.imgbg}></div>
+          </div>
         } 
         data-aos="fade-up"
       />

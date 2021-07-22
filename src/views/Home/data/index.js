@@ -340,39 +340,17 @@ export const computing_data = [
 export const news_data = [
   {
     cover: {
-      src: '/assets/1.png',
-      srcSet: '/assets/1.png 2x',
+      src: '/assets/1.png', 
     },
-    title: 'News',
-    subtitle:
-      'Get your favourite adidas shoes, clothing & accessories at the official website! adidas Training.',
-    author: {
-      photo: {
-        src: 'assets/video-1.png',
-        srcSet: '/assets/1.png 2x',
-      },
-      name: 'Akachi Luccini',
-    },
-    date: '04 Aug',
-    tags: [],
+    title: "Let's start the oracle 3.0 era together with co-Founder&CMO Christopher Quet! ",
+    url: 'https://www.youtube.com/watch?v=l6q0I0SO5MU&t=29s'
   },
   {
     cover: {
       src: '/assets/2.png',
-      srcSet: '/assets/2.png 2x',
     },
-    title: "News‎",
-    subtitle:
-      "A self-cleaning water bottle that'll help you reach your hydration goal. Neutralizes up to 99%* of harmful, odor-causing bacteria using UV-C light.",
-    author: {
-      photo: {
-        src: '/assets/2.png',
-        srcSet: '/assets/2.png 2x 2x',
-      },
-      name: 'Kate Segelson',
-    },
-    date: '04 Aug',
-    tags: [],
+    title: "A depth-conversation with ADAMoracle",
+    url: 'https://youtu.be/he7kwR6vcBw'
   },
 ];
 
@@ -397,7 +375,7 @@ export const team_data = [
     title: "Christopher Quet‎",
     subtitle:
       "ADAMoracle Co-founder and CMO Christopher Quet",
-    description: 'Christopher Quet graduated from the University of Lyon, France, majoring in international trade. With 22 years of working experience, Christopher conduces business cooperation in more than 80 countries to expand the business, and provide unique customized solutions for multinational enterprises. Christopher can adapt to a specific market, has rich experience in sales, marketing, and team management, and has successfully established and managed an international subsidiary network.',
+    description: 'Christopher Quet graduated in International Trading in Lyon University, France, after studying in electronics. Christopher has operated and developed business in over 80 countries throughout his 22 years of experience, developing partnerships, and unique customized solutions. ',
     date: '04 Aug',
     tags: [],
   },
@@ -410,7 +388,7 @@ export const team_data = [
     title: "Olga Petrovska‎",
     subtitle:
       "ADAMoracle Co-founder and COO Olga Petrovska",
-    description: 'Olga petrovska comes from Ukraine and majored in English and literature at Uman National Language University. Guided by her two brothers, Olga decided to run a commercial business. She has been working at multinational enterprises in the United States for many years, then studied blockchain in the United Arab Emirates for eight years, and became an expert in blockchain-related projects. She firmly believes that science and technology can provide better services, “blockchain technology will be the leading innovation which will guide the world’s major industries into the future era.”',
+    description: 'Olga Petrovskashe studied English and Literature at the Uman State Linguistic University. After some years of experience working abroad for various international corporations, first in USA and in the United Arab Emirates for the last 8 years, Olga became an expert in blockchain related projects.”',
     date: '04 Aug',
     tags: [],
   },

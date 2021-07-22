@@ -21,7 +21,7 @@ export const useDarkMode = () => {
 
   useEffect(() => {
     const localTheme = window.localStorage.getItem('themeMode');
-    localTheme ? setTheme(localTheme) : setMode('light');
+    localTheme ? setTheme(localTheme) : setMode('dark');
     setMountedComponent(true);
     AOS.refresh();
   }, []);

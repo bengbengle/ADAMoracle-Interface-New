@@ -26,6 +26,7 @@ const useStyles = makeStyles(theme => ({
     marginLeft: '40px',
     inlineHeight: '43px',
     whiteSpace: 'nowrap',
+    fontFamily: "'AlibabaPuHuiTi-Heavy'",
     [theme.breakpoints.down('sm')]: {
       marginLeft: '10px',
       fontSize: '32px',
@@ -98,12 +99,12 @@ const Computing = props => {
   }
 
   return (
-    <div className={className} data-aos="fade-up" {...rest}>
+    <div className={className} data-aos="fade-up" {...rest} id='become-computing-node'>
       <SectionHeader
         title={
           <>
             <div className={classes.titledot}></div>
-            <p className={classes.textWhite}>
+            <p className={classes.textWhite} id="developer">
               Become Computing Node
             </p>
             <Image
@@ -126,7 +127,7 @@ const Computing = props => {
           className: classes.subTextClass,
         }}
       />
-      <Grid container spacing={isMd ? 10 : 0} justify="center"  >
+      <Grid container spacing={isMd ? 10 : 0} justify="center">
         <Grid item xs={12} sm={12} md={6} container  
           className={classes.listGrid}
         >
@@ -152,7 +153,6 @@ const Computing = props => {
                     background: '#4B4B4B',
                     borderRadius: '2px'
                   }}></div>,
-                 
                   <div style={{
                     width: '58px',
                     height: '5px',
