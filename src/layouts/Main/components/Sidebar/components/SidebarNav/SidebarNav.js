@@ -208,7 +208,7 @@ const SidebarNav = props => {
           Pledge
         </Button>
       </ListItem>
-      <ListItem className={classes.listItem}>
+      {/* <ListItem className={classes.listItem}>
         <Button
           fullWidth
           component="a"
@@ -225,7 +225,7 @@ const SidebarNav = props => {
         >
           Blog
         </Button>
-      </ListItem>
+      </ListItem> */}
 
       <ListItem className={classes.listItem}>
         <Button

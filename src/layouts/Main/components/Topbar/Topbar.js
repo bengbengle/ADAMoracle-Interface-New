@@ -183,7 +183,7 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
   const Navs = TransferObj2Arr(pages)
 
   const redirectToPledge = event => {
-    window.open("https://www.liquidity.adamoracle.io/");
+    window.open("https://liquidity.adamoracle.io/");
   }
   const scrollToDataProvider = (event) => {
     const anchor = (event.target.ownerDocument || document).querySelector('#become-data-provider');
@@ -236,12 +236,12 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
           <ListItem className={clsx(classes.listItem)} onClick={redirectToPledge}>
             Pledge
           </ListItem>
-          <ListItem className={clsx(classes.listItem)}>
+          {/* <ListItem className={clsx(classes.listItem)}>
             Ecosystem
           </ListItem>
           <ListItem className={clsx(classes.listItem)}>
             Blog
-          </ListItem>
+          </ListItem> */}
 
           {/* {
             [...Navs].map((page, i) => (

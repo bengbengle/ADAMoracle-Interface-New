@@ -344,14 +344,14 @@ const Main = ({ children, themeToggler, themeMode }) => {
       title: 'Pledge',
       id: 'pledge',
     },
-    Ecosystem: {
-      title: 'Ecosystem',
-      id: 'ecosystem',
-    },
-    Blog: {
-      title: 'Blog',
-      id: 'blog',
-    },
+    // Ecosystem: {
+    //   title: 'Ecosystem',
+    //   id: 'ecosystem',
+    // },
+    // Blog: {
+    //   title: 'Blog',
+    //   id: 'blog',
+    // },
   }
 
   const [openSidebar, setOpenSidebar] = useState(false);

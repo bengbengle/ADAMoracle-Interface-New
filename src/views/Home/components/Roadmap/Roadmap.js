@@ -122,6 +122,7 @@ const StyledRoadmapContainer = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
+
 const StyledRoadmap = styled.div`
   width: 100%;
   margin: 0 auto;
@@ -132,6 +133,7 @@ const StyledRoadmap = styled.div`
     height: auto;
   }
 `;
+
 const StyledHomeTitle = styled.p`
   width: 100%;
   text-align: center;
