@@ -39,11 +39,7 @@ const useStyles = makeStyles(theme => ({
       boxShadow: '0 1.5rem 2.5rem rgb(22 28 45 / 10%), 0 0.3rem 0.5rem -0.5rem rgb(22 28 45 / 5%) !important'
     }
   },
-  bgbox: {
-    // backgroundRepeat: 'no-repeat',
-    // background: "url('/assets/shadow.png')",
-    // backgroundSize: '100% 84%'
-
+  bgbox: { 
     width: '100%',
     height: '100%',
   },
@@ -53,9 +49,9 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     alignItems: 'center',
     padding: '35px',
-    backgroundRepeat: 'no-repeat',
-    background: "url('/assets/shadow.png')",
-    backgroundSize: '100% 100%',
+    // backgroundRepeat: 'no-repeat',
+    // background: "url('/assets/shadow.png')",
+    // backgroundSize: '100% 100%',
 
     [theme.breakpoints.up('md')]: {
       padding: '100px'

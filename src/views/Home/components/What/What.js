@@ -12,6 +12,11 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     justifyContent: 'space-between',
   },
+  videobox: {
+    [theme.breakpoints.down('md')]: {
+      marginTop: '30px',
+    },
+  },
   coverImage: {
     borderRadius: '20px',
 
@@ -26,7 +31,7 @@ const useStyles = makeStyles(theme => ({
     top: 'calc(50% - 53px)',
     left: 'calc(50% - 50px)',
     zIndex: '1',
-    background: '#252525',
+    background: '#7b797a',
     borderRadius: '50%',
     '&:hover': {
       background: '#d2271f',
@@ -91,8 +96,8 @@ const What = props => {
           alignItems="center"
           xs={12}
           md={6}
-          spacing={0}
           data-aos="fade-up"
+          className={classes.videobox}
         >
           <Image
             src="assets/video.png"

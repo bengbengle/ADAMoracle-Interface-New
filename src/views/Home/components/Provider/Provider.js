@@ -155,7 +155,7 @@ const Provider = props => {
             </Grid>
             <Grid item container justify="center" xs={12} sm={12} md={6} style={{
               padding: '50px',
-              paddingRight: '116px' 
+              paddingRight: '156px' 
             }}>
               <Image src={item.illustration} alt={item.title} style={{
                 // 'object-fit': 'contain',

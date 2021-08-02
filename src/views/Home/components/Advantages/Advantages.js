@@ -7,13 +7,30 @@ import { SectionHeader } from 'components/molecules';
 import { DescriptionListIcon } from 'components/organisms';
 
 const useStyles = makeStyles(theme => ({
+  // textWhite: {
+  //   color: '#3C3C3C',
+  //   fontWeight: 800,
+  //   fontSize: '52px',
+  //   display: 'inline-block',
+  //   height: '120px',
+  //   fontFamily: "'AlibabaPuHuiTi-Heavy'",
+  // },
   textWhite: {
-    color: '#3C3C3C',
+    color: 'white',
+    marginBottom: '100px',
+    height: '100px',
+    fontSize: '2.5rem',
+    fontFamily: "Alibaba PuHuiTi",
     fontWeight: 800,
-    fontSize: '52px',
-    display: 'inline-block',
-    height: '120px',
+    color: 'rgb(60, 60, 60)',
+    marginLeft: '30px',
     fontFamily: "'AlibabaPuHuiTi-Heavy'",
+    color: '#3c3c3c',
+    fontSize: '80px',
+    display: 'inline-block',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '50px',
+    },
   },
   avatar: {
     width: 70,
@@ -23,12 +40,13 @@ const useStyles = makeStyles(theme => ({
 
   },
   imgbg: {
-    width: '300px',
+    width: '106%',
     height: '50px',
     background: '#2c2c2c85',
     position: 'relative',
-    marginTop: '-25px',
-    zIndex: '-1'
+    marginTop: '-35px',
+    zIndex: '-1',
+    marginLeft: '-3%'
   },
   descriptionListIcon: {
     '& .description-list-icon__title': {

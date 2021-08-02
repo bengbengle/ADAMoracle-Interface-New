@@ -46,7 +46,7 @@ const useStyles = makeStyles(theme => ({
 
 const StyledRoadmapTimelineItem = styled.div`
   width: 100%;
-  height: 300px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,7 +56,7 @@ const StyledRoadmapTimelineLabel = styled.div`
   flex-shrink: 0;
   flex-grow: 0;
   width: 100%;
-  height: 149px;
+  height: 173px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,6 +66,7 @@ const StyledRoadmapTimelineLabel = styled.div`
   font-size: 20px;
   line-height: 1.5;
   color: #FFFFFF;
+  text-align: center;
   transition: all .15s ease-in-out;
   ${StyledRoadmapTimelineItem}:hover & {
     color: #EA5514;
@@ -110,7 +111,7 @@ const StyledRoadmapTimelineDesc = styled.div`
   flex-grow: 1;
   width: 100%;
   height: 149px;
-  padding: 20px;
+  padding: 0px;
   font-family: Source Han Sans CN;
   font-style: normal;
   font-weight: 350;
@@ -120,6 +121,7 @@ const StyledRoadmapTimelineDesc = styled.div`
   opacity: 0.6;
   transition: all .15s ease-in-out;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   ${StyledRoadmapTimelineItem}:hover & {
     color: #EA5514;
@@ -180,11 +182,12 @@ const StyledSwiperNavigation = styled.div`
     padding: 20px;
     color: black;
     border-radius: 100%;
-    background: white;
+    background: #575757;
     font-weight: bold;
     justify-content: center;
     align-items: center;
     &:hover {
+      background: white;
       cursor: pointer;
     }
 `;
@@ -195,7 +198,7 @@ const t = (key) => {
     "Timeline-Label-1": "2020 July 1st",
     "Timeline-Label-2": "Aug",
 
-    "Timeline-Label-0": "March",
+    "Timeline-Label-0": "2022 March",
 
     "Timeline-Label-3": "2021 Mid-April",
     "Timeline-Label-4": "Late April",
@@ -226,14 +229,25 @@ const t = (key) => {
 const RoadmapItem = (props) => (
   <StyledRoadmapTimelineItem>
     <StyledRoadmapTimelineLabel>
-      {props.time}
+      <img
+        width='60px'
+        className={'image'}
+        alt={'alt'}
+        src={'/assets/roadmap/'+  props.idx + '.png'}
+      />
     </StyledRoadmapTimelineLabel>
     <StyledRoadmapTimelineDivider>
       <StyledRoadmapTimelineDividerHoverImg src={TIMELINE_ARROW_ACTIVE} alt='timeline_arrow' />
       <StyledRoadmapTimelineDividerImg src={TIMELINE_ARROW} alt='timeline_arrow_unselected' />
     </StyledRoadmapTimelineDivider>
+    
     <StyledRoadmapTimelineDesc>
+      <p style={{color: '#F55C21', fontWeight: '800', fontFamily: 'Alibaba PuHuiTi', textAlign: 'center', fontSize: '24px'}}>
+        {props.time}
+      </p>
+      <p style={{marginTop: '10px', textAlign: 'center', height: '90px' }}>
       {props.desc}
+      </p>
     </StyledRoadmapTimelineDesc>
   </StyledRoadmapTimelineItem>
 );
@@ -298,31 +312,33 @@ const Roadmap = props => {
             onSwiper={setSwiperInstance}
           >
             <SwiperSlide>
-              <RoadmapItem time={t('Timeline-Label-1')} desc={t('Timeline-Value-1')} />
+              <RoadmapItem time={t('Timeline-Label-1')} desc={t('Timeline-Value-1')} idx='1' />
             </SwiperSlide>
             <SwiperSlide>
-              <RoadmapItem time={t('Timeline-Label-2')} desc={t('Timeline-Value-2')} />
+              <RoadmapItem time={t('Timeline-Label-2')} desc={t('Timeline-Value-2')} idx='2' />
+            </SwiperSlide>
+            
+            <SwiperSlide>
+              <RoadmapItem time={t('Timeline-Label-3')} desc={t('Timeline-Value-3')} idx='3'/>
             </SwiperSlide>
             <SwiperSlide>
-              <RoadmapItem time={t('Timeline-Label-0')} desc={t('Timeline-Value-0')} />
+              <RoadmapItem time={t('Timeline-Label-4')} desc={t('Timeline-Value-4')} idx='4'  />
             </SwiperSlide>
             <SwiperSlide>
-              <RoadmapItem time={t('Timeline-Label-3')} desc={t('Timeline-Value-3')} />
+              <RoadmapItem time={t('Timeline-Label-5')} desc={t('Timeline-Value-5')} idx='5'/>
             </SwiperSlide>
             <SwiperSlide>
-              <RoadmapItem time={t('Timeline-Label-4')} desc={t('Timeline-Value-4')} />
+              <RoadmapItem time={t('Timeline-Label-6')} desc={t('Timeline-Value-6')} idx='6' />
             </SwiperSlide>
             <SwiperSlide>
-              <RoadmapItem time={t('Timeline-Label-5')} desc={t('Timeline-Value-5')} />
+              <RoadmapItem time={t('Timeline-Label-7')} desc={t('Timeline-Value-7')} idx='7' />
             </SwiperSlide>
             <SwiperSlide>
-              <RoadmapItem time={t('Timeline-Label-6')} desc={t('Timeline-Value-6')} />
+              <RoadmapItem time={t('Timeline-Label-8')} desc={t('Timeline-Value-8')} idx='8' />
             </SwiperSlide>
+
             <SwiperSlide>
-              <RoadmapItem time={t('Timeline-Label-7')} desc={t('Timeline-Value-7')} />
-            </SwiperSlide>
-            <SwiperSlide>
-              <RoadmapItem time={t('Timeline-Label-8')} desc={t('Timeline-Value-8')} />
+              <RoadmapItem time={t('Timeline-Label-0')} desc={t('Timeline-Value-0')} idx='9'  />
             </SwiperSlide>
           </Swiper>
           <StyledSwiperNavigation onClick={handleNextSwiper}>

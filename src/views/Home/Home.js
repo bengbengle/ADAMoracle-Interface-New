@@ -41,6 +41,22 @@ const useStyles = makeStyles(theme => ({
     borderBottomRightRadius: '100%',
     borderBottom: `1px solid ${colors.grey[200]}`,
   },
+  connect: {
+    width: '100%',
+    display: 'flex',
+    background: 'url(/assets/shadow.png)',
+    alignItems: 'center',
+    backgroundSize: '100% 100%',
+    justifyContent: 'center',
+    backgroundRepeat: 'no-repeat',
+    margin: '0',
+    maxWidth: '100%',
+    padding: '74px calc(50% - 600px)',
+    [theme.breakpoints.down('md')]: {
+      // paddingTop: theme.spacing(5),
+      padding: '74px 64px',
+    },
+  },
   computing_bg: {
     '&::before': {
       right: '500px',
@@ -73,7 +89,7 @@ const Home = () => {
         <What />
       </Section>
       
-      <Section>
+      <Section className={classes.connect}>
         <Connect data={connect_data } />
       </Section>
       
