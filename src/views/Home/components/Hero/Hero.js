@@ -109,17 +109,17 @@ const useStyles = makeStyles(theme => ({
     }
   },
   title: {
-    top: '-4rem',
+    top: '-2rem',
     paddingLeft: '10%',
     color: '#FFFFFF',
     height: '5rem',
     display: 'inline',
     position: 'absolute',
-    fontSize: '90px',
+    fontSize: '80px',
     overflowX: 'visible',
     textAlign: 'left',
     fontWeight: '800',
-    width: '100%',
+    width: '35vw',
     [theme.breakpoints.down('md')]: {
       top: '-2rem',
       'font-size': '60px',
@@ -173,6 +173,7 @@ const useStyles = makeStyles(theme => ({
   },
   buttongroups: {
     marginTop: '50px',
+    display: 'flex',
     [theme.breakpoints.down('sm')]: {
       marginTop: '30px',
       display: 'flex',

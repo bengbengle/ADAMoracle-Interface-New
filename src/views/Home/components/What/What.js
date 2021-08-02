@@ -13,9 +13,25 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'space-between',
   },
   coverImage: {
+    borderRadius: '20px',
+
     [theme.breakpoints.down('sm')]: {
       maxWidth: 500,
     },
+  },
+  imagestart: {
+    width: '100px',
+    position: 'absolute',
+    height: '100px',
+    top: 'calc(50% - 53px)',
+    left: 'calc(50% - 50px)',
+    zIndex: '1',
+    background: '#252525',
+    borderRadius: '50%',
+    '&:hover': {
+      background: '#d2271f',
+      cursor: 'pointer'
+    }
   },
   titleTxt: {
     width: '321px',
@@ -58,7 +74,6 @@ const What = props => {
                     <div className={classes.titleTxt }>
                       What is ADAMoracle
                     </div>
-                 
                   </span>
                 }
                 subtitle="ADAMoracle is the first cross-chain decentralized oracle that supports wide-area node quotation. It can provide smart contract developers with comprehensive tools and data, as well as a safer and more convenient oracle product. ADAMoracle will promote the development of rich business formats such as lending, asset synthesis, and prediction markets by connecting real-world data and blockchain systems."
@@ -84,11 +99,17 @@ const What = props => {
             alt="..."
             className={classes.coverImage}
           />
+          <Image
+            onClick={() => window.open('https://www.youtube.com/watch?v=Vi62u5p3hmU', '_blank') }
+            src="assets/start.png"
+            alt="..."
+            className={classes.imagestart}
+          />
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
 What.propTypes = {
   /**

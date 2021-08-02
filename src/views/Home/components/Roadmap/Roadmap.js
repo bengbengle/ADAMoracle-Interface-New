@@ -160,7 +160,7 @@ const StyledSwiperNavigation = styled.div`
     font-size: 18px;
     text-transform: none!important;
     letter-spacing: 0;
-    padding: 10px;
+    padding: 20px;
     color: black;
     border-radius: 100%;
     background: white;
