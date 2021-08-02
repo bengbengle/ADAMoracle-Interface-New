@@ -374,7 +374,7 @@ export const team_data = [
     },
     title: "Christopher Quet‎",
     subtitle:
-      "ADAMoracle Co-founder and CMO Christopher Quet",
+      "ADAMoracle Co-founder Christopher Quet",
     description: 'Christopher Quet graduated in International Trading in Lyon University, France, after studying in electronics. Christopher has operated and developed business in over 80 countries throughout his 22 years of experience, developing partnerships, and unique customized solutions. ',
     date: '04 Aug',
     tags: [],

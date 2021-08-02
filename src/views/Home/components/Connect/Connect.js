@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
     color: 'white',
     marginBottom: '100px',
     height: '100px',
-    fontSize: '2.7rem',
+    fontSize: '2.5rem',
     fontFamily: "Alibaba PuHuiTi",
     fontWeight: 800,
     color: 'rgb(60, 60, 60)',
@@ -114,7 +114,7 @@ const Connect = props => {
       <SectionHeader
         title={
           <span className={classes.textWhite}>
-            Connect real world data with blockchain system
+            Connect real world data with blockchain
           </span>
         } 
         data-aos="fade-up"

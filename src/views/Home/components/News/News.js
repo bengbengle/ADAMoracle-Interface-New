@@ -9,6 +9,22 @@ import { pink } from '@material-ui/core/colors';
 import Collapse from '@material-ui/core/Collapse';
 
 const useStyles = makeStyles(theme => ({
+  textWhite: {
+    color: 'white',
+    marginBottom: '100px',
+    height: '100px',
+    fontSize: '2.5rem',
+    fontFamily: "Alibaba PuHuiTi",
+    fontWeight: 800,
+    color: 'rgb(60, 60, 60)',
+    marginLeft: '30px',
+    fontFamily: "'AlibabaPuHuiTi-Heavy'",
+    color: '#3c3c3c',
+    fontSize: '80px',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '50px',
+    },
+  },
   cardProduct: {
     display: 'flex',
     flexDirection: 'column',
@@ -52,10 +68,10 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 800,
     fontSize: '52px',
     display: 'inline-block',
-    height: '80px',
+    height: '90px',
   },
   subTitle: {
-    height: '10px',
+    height: '80px',
     fontSize: '12px!important',
     fontWeight: '500',
     color: '#F55C21!important'
@@ -115,7 +131,11 @@ const News = props => {
   return (
     <div className={className} {...rest}>
       <DescriptionCta
-        title="ADAMoracle News"
+        title={
+          <span className={classes.textWhite}>
+            ADAMoracle News
+          </span>
+        }
         align={'center'}
         titleProps={{
           variant: 'h4',

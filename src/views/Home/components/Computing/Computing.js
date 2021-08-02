@@ -108,7 +108,8 @@ const Computing = props => {
           <>
             <div className={classes.titledot}></div>
             <p className={classes.textWhite} id="developer">
-              Become Computing Node
+              {/* Become Computing Node */}
+              Become Storage Node
             </p>
             <Image
               src={image1.src}

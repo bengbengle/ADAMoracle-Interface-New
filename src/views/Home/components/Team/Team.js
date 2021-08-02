@@ -8,6 +8,22 @@ import { CardProduct } from 'components/organisms';
 import Collapse from '@material-ui/core/Collapse';
 // import { Button, Typography, Grid, Paper  } from '@material-ui/core';
 const useStyles = makeStyles(theme => ({
+  textWhite: {
+    color: 'white',
+    marginBottom: '100px',
+    height: '100px',
+    fontSize: '2.5rem',
+    fontFamily: "Alibaba PuHuiTi",
+    fontWeight: 800,
+    color: 'rgb(60, 60, 60)',
+    marginLeft: '30px',
+    fontFamily: "'AlibabaPuHuiTi-Heavy'",
+    color: '#3c3c3c',
+    fontSize: '80px',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '50px',
+    },
+  },
   cardProduct: {
     display: 'flex',
     flexDirection: 'column',
@@ -31,7 +47,7 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 800,
     fontSize: '52px',
     display: 'inline-block',
-    height: '80px',
+    height: '158px',
   },
   descriptionCta: {
     marginBottom: theme.spacing(3),
@@ -105,11 +121,7 @@ const Team = props => {
           <div className='bottomDesc'>{subtitle}</div>
           <div className='bottomDesc'>
           </div>
-        </div>
-        {/*           
-        <Collapse in={true} >
-           
-        </Collapse> */}
+        </div> 
       </>
     );
   }
@@ -150,7 +162,11 @@ const Team = props => {
   return (
     <div className={className} {...rest}>
       <DescriptionCta
-        title="Team"
+        title={
+          <span className={classes.textWhite}>
+            Team
+          </span>
+        }
         align={'center'}
         titleProps={{
           variant: 'h4',

@@ -36,7 +36,7 @@ const useStyles = makeStyles(theme => ({
   titleTxt: {
     width: '321px',
     height: '100px',
-    fontSize: '2.7rem',
+    fontSize: '2.5rem',
     fontFamily: "'AlibabaPuHuiTi-Heavy'",
     fontWeight: 800,
     color: 'rgb(112 112 112)',

@@ -24,8 +24,23 @@ import TIMELINE_ARROW_ACTIVE from '../../../../assets/images/icon-arrow-active.p
 import TIMELINE_ARROW from '../../../../assets/images/icon-arrow.png'
 
 const useStyles = makeStyles(theme => ({
-  
 
+  textWhite: {
+    color: 'white',
+    marginBottom: '100px',
+    height: '100px',
+    fontSize: '2.5rem',
+    fontFamily: "Alibaba PuHuiTi",
+    fontWeight: 800,
+    color: 'rgb(60, 60, 60)',
+    marginLeft: '30px',
+    fontFamily: "'AlibabaPuHuiTi-Heavy'",
+    color: '#3c3c3c',
+    fontSize: '80px',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '50px',
+    },
+  },
 }));
 
 
@@ -177,22 +192,33 @@ const StyledSwiperNavigation = styled.div`
 const t = (key) => {
   var obj =
   {
-    "Timeline-Label-1": "2020/7/1",
-    "Timeline-Label-2": "2020/8/1",
-    "Timeline-Label-3": "Mid-April 2021",
-    "Timeline-Label-4": "Late April-Early May 2021",
-    "Timeline-Label-5": "Mid-May 2021",
-    "Timeline-Label-6": "2021/6",
-    "Timeline-Label-7": "2021/7",
-    "Timeline-Label-8": "2021/8",
-    "Timeline-Value-1": "ADAMoracle laboratory was established",
-    "Timeline-Value-2": "Obtain strategic investment from Collinstar/Redline Capital/ZB Labs/MCS CAPITAL /YottaFund/BTX Capital",
-    "Timeline-Value-3": "ADAMracle Beta version is online",
-    "Timeline-Value-4": "Launch on test net",
-    "Timeline-Value-5": "Voting system online",
-    "Timeline-Value-6": "Node election mechanism online",
-    "Timeline-Value-7": "Community governance online",
-    "Timeline-Value-8": "Launch global data sources ecological construction",
+    "Timeline-Label-1": "2020 July 1st",
+    "Timeline-Label-2": "Aug",
+
+    "Timeline-Label-0": "March",
+
+    "Timeline-Label-3": "2021 Mid-April",
+    "Timeline-Label-4": "Late April",
+
+    "Timeline-Label-5": "May",
+    "Timeline-Label-6": "June",
+    "Timeline-Label-7": "September",
+    "Timeline-Label-8": "December",
+
+    "Timeline-Value-1": "ADAMoracle Lab established",
+    "Timeline-Value-2": "Officially obtained investment from Collinstar、Consensus Lab、MCS Capita、ZB Labs、BTX Capita、MCS Capital",
+    
+
+    "Timeline-Value-0": "Start the construction of global distributed data sources",
+
+    "Timeline-Value-3": "ADAMoralce pledge product test version goes online",
+    "Timeline-Value-4": "ADAMoralce pledge product officially launched",
+
+    "Timeline-Value-5": "Beta version of ADAMoracle is online",
+    "Timeline-Value-6": "ADAMoracle official version is launched",
+
+    "Timeline-Value-7": "Start the wide-area node computing platform",
+    "Timeline-Value-8": "The community DAO governance platform will be online",
   }
   return obj[key]
 }
@@ -249,13 +275,19 @@ const Roadmap = props => {
 
   console.log('num::', num)
 
+  const classes = useStyles();
+
+
 
   return (
-    <div {...rest}> 
+    <div {...rest}>
       <StyledRoadmap id="roadmap">
         <StyledHomeTitle>
-          <span>Roadmap</span>
+          <span className={classes.textWhite}>
+            Roadmap
+          </span>
         </StyledHomeTitle>
+
         <StyledRoadmapContainer>
           <StyledSwiperNavigation onClick={handlePrevSwiper}>
             prev
@@ -270,6 +302,9 @@ const Roadmap = props => {
             </SwiperSlide>
             <SwiperSlide>
               <RoadmapItem time={t('Timeline-Label-2')} desc={t('Timeline-Value-2')} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <RoadmapItem time={t('Timeline-Label-0')} desc={t('Timeline-Value-0')} />
             </SwiperSlide>
             <SwiperSlide>
               <RoadmapItem time={t('Timeline-Label-3')} desc={t('Timeline-Value-3')} />
