@@ -203,7 +203,8 @@ const SidebarNav = props => {
         <Button
           fullWidth
           component="a"
-          href="/"
+          target="blank"
+          href="https://liquidity.adamoracle.io"
         >
           Pledge
         </Button>
@@ -234,13 +235,11 @@ const SidebarNav = props => {
           fullWidth
           component="a"
           target="blank"
-          href="https://material-ui.com/store/items/the-front-landing-page/"
+          href="https://liquidity.adamoracle.io"
         >
           Go Now
         </Button>
       </ListItem>
-    
-    
     </List>
   );
 };
