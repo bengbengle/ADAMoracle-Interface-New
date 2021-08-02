@@ -99,7 +99,7 @@ const useStyles = makeStyles(theme => ({
     right: '150px',
     width: '300px',
     height: '300px',
-    zIndex: 1,
+    zIndex: 0,
     position: 'absolute',
     clipPath: 'circle(50% at right)',
     background: 'linear-gradient(87deg, #a4a4a414, rgb(77 77 77 / 27%))',

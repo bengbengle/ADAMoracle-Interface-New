@@ -6,6 +6,16 @@ import { Image } from 'components/atoms';
 import { SectionHeader, CountUpNumber } from 'components/molecules';
 
 const useStyles = makeStyles(theme => ({
+  bgbox: {
+    position: 'fixed',
+    top: '0',
+    left: '0',
+    bottom: '0',
+    right: '0',
+    width: '100%',
+    height: '100%',
+    background: 'rgba(0,0,0,0.4)'
+  },
   placementGrid: {
     maxWidth: 320,
     width: '100%',
@@ -31,7 +41,8 @@ const useStyles = makeStyles(theme => ({
     top: 'calc(50% - 53px)',
     left: 'calc(50% - 50px)',
     zIndex: '1',
-    background: '#7b797a',
+    background: '#ff6b22',
+    boxShadow: '1px 1px 10px #ff6b22',
     borderRadius: '50%',
     '&:hover': {
       background: '#d2271f',
@@ -110,6 +121,9 @@ const What = props => {
             alt="..."
             className={classes.imagestart}
           />
+          {/* <div className={ classes.bgbox }>
+
+          </div> */}
         </Grid>
       </Grid>
     </div>
