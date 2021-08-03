@@ -41,11 +41,10 @@ const useStyles = makeStyles(theme => ({
     top: 'calc(50% - 53px)',
     left: 'calc(50% - 50px)',
     zIndex: '1',
-    background: '#ff6b22',
-    boxShadow: '1px 1px 10px #ff6b22',
+    background: '#ffffff00',
     borderRadius: '50%',
     '&:hover': {
-      background: '#d2271f',
+      background: '#ffffff',
       cursor: 'pointer'
     }
   },
