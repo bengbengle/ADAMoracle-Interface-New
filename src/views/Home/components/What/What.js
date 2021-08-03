@@ -110,14 +110,14 @@ const What = props => {
           className={classes.videobox}
         >
           <Image
-            src="assets/video.png"
+            src="/assets/video.png"
             alt="..."
             className={classes.coverImage}
           />
           <Image
             onClick={() => window.open('https://www.youtube.com/watch?v=Vi62u5p3hmU', '_blank') }
-            src="assets/start.png"
-            alt="..."
+            src={"/assets/start.png?tempid=" + Math.random()}
+            alt="...." 
             className={classes.imagestart}
           />
           {/* <div className={ classes.bgbox }>
