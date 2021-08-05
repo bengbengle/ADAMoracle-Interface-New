@@ -175,8 +175,6 @@ const Footer = props => {
                 </li>
                 <li onClick={e => window.open('https://forms.gle/iCFs7CYCjBwCerkE9', '_blank')} >Feedback Center</li>
               </ul>
-              
-              
             </div>
           </Grid>
 
