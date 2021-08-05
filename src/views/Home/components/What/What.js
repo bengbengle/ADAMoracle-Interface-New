@@ -119,10 +119,7 @@ const What = props => {
             src={"/assets/start.png?tempid=" + Math.random()}
             alt="...." 
             className={classes.imagestart}
-          />
-          {/* <div className={ classes.bgbox }>
-
-          </div> */}
+          /> 
         </Grid>
       </Grid>
     </div>

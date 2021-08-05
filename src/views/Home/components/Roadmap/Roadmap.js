@@ -209,7 +209,7 @@ const t = (key) => {
     "Timeline-Label-8": "December",
 
     "Timeline-Value-1": "ADAMoracle Lab established",
-    "Timeline-Value-2": "Officially obtained investment from Collinstar、Consensus Lab、MCS Capita、ZB Labs、BTX Capita、MCS Capital",
+    "Timeline-Value-2": "Officially obtained investment from Collinstar、Consensus Lab、MCS Capital、ZB Labs、BTX Capital",
     
 
     "Timeline-Value-0": "Start the construction of global distributed data sources",

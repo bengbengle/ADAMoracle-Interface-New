@@ -105,10 +105,12 @@ const Computing = props => {
     <div className={className} data-aos="fade-up" {...rest} id='become-computing-node'>
       <SectionHeader
         title={
-          <>
+          <a style={{
+            display: 'inherit',
+            alignItems: 'center'
+          }} target='_blank' href='https://forms.gle/L78NwEfg7Gx9SFpk7' >
             <div className={classes.titledot}></div>
-            <p className={classes.textWhite} id="developer">
-              {/* Become Computing Node */}
+            <p className={classes.textWhite} id="developer"> 
               Become Storage Node
             </p>
             <Image
@@ -117,7 +119,7 @@ const Computing = props => {
               alt={image1.alt}
               className={ classes.headerAllow }
             />
-          </>
+          </a>
         }
         subtitle={
           <>
@@ -188,7 +190,7 @@ const Computing = props => {
                 subtitle={
                   <>
                     {
-                      'Any enterprise or individual that has certain server equipment, has certain technical operation and maintenance capabilities, and able to start nodes to complete Docker images, can join the ADAMoracle ecosystem'
+                      'Pledge dividends, customer payment income, and voting rewards                                                           '
                     }
                   </>
                 }

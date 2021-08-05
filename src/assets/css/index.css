@@ -118,6 +118,9 @@ main {
   display: inline-flex;
   list-style: none;
 }
+.bottomList li:hover {
+  cursor: pointer;
+}
 .bottomDesc {
   font-size: 10px;
   font-weight: 500;

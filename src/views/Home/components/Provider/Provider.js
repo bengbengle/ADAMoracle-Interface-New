@@ -80,7 +80,10 @@ const Provider = props => {
     <div className={className} data-aos="fade-up" {...rest} id='become-data-provider'>
       <SectionHeader
         title={
-          <>
+          <a style={{
+            display: 'inherit',
+            alignItems: 'center'
+          }} target='_blank' href='https://forms.gle/L78NwEfg7Gx9SFpk7' >
             <div className={classes.titledot}></div>
             <p className={classes.textWhite}>Become Data Provider</p>
             <Image
@@ -88,8 +91,9 @@ const Provider = props => {
               srcSet={image1.srcset}
               alt={image1.alt}
               className={ classes.headerAllow }
+              target='_blank' href='https://forms.gle/L78NwEfg7Gx9SFpk7'
             />
-          </>
+          </a>
         }
         subtitle={
           <>
@@ -157,11 +161,7 @@ const Provider = props => {
               padding: '50px',
               paddingRight: '156px' 
             }}>
-              <Image src={item.illustration} alt={item.title} style={{
-                // 'object-fit': 'contain',
-                //   height: '435px',
-                //   width: 'auto'
-              }} />
+              <Image src={item.illustration} alt={item.title} />
             </Grid>
           </Grid>
         ))}

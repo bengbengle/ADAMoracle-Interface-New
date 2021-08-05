@@ -170,8 +170,10 @@ const Footer = props => {
               <ul className='bottomList'>
                 <li>View Dapp List</li>
                 <li>Ecological Governance Manual</li>
-                <li>Help Center</li>
-                <li>Feedback Center</li>
+                <li onClick={e => window.open('https://forms.gle/iCFs7CYCjBwCerkE9', '_blank')} >
+                    Help Center
+                </li>
+                <li onClick={e => window.open('https://forms.gle/iCFs7CYCjBwCerkE9', '_blank')} >Feedback Center</li>
               </ul>
               
               
