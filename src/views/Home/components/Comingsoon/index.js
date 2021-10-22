@@ -7,7 +7,7 @@ import { SectionHeader } from 'components/molecules';
 const useStyles = makeStyles(theme => ({
     titleTxt: {
         height: '100px',
-        fontSize: '1.6rem',
+        fontSize: '2.2rem',
         fontFamily: "'AlibabaPuHuiTi-Heavy'",
         fontWeight: 800,
         color: 'rgb(255 107 34)',
@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
         flexDirection: 'row',
         justifyContent: 'center'
     },
-    
+
     timesSpan: {
         background: 'url(/assets/timebg.png) no-repeat',
         backgroundSize: 'cover',
