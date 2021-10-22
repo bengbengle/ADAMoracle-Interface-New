@@ -185,6 +185,10 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
   const redirectToPledge = event => {
     window.open("https://liquidity.adamoracle.io/");
   }
+    
+  const redirectToAdambox = event => {
+    window.open("http://testnet.mine.adambox.io/");
+  }
   const scrollToDataProvider = (event) => {
     const anchor = (event.target.ownerDocument || document).querySelector('#become-data-provider');
 
@@ -227,7 +231,7 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
       <div className={classes.flexGrow} />
       <Hidden smDown>
         <List disablePadding className={classes.navigationContainer}>
-          <ListItem className={clsx(classes.listItem, '')} onClick={redirectToPledge}>
+          <ListItem className={clsx(classes.listItem, '')} onClick={redirectToAdambox}>
             ADAMBox
             <div className='fireicon'></div>
           </ListItem>

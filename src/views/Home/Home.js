@@ -78,13 +78,18 @@ const useStyles = makeStyles(theme => ({
 
 const Home = () => {
   const classes = useStyles();
+  
+  const redirectToAdambox = event => {
+    window.open("http://testnet.mine.adambox.io/");
+  }
 
   return (
     <div>
-      <div className='noticebar'>
+      <div className='noticebar' onClick={redirectToAdambox}>
         <div className='noticeicon'>
         </div>
         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
       </div>
 
       <Section className={classes.pagePaddingTop}>
