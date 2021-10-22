@@ -12,7 +12,8 @@ import {
   Computing,
   News,
   Team,
-  Roadmap
+  Roadmap,
+  Comingsoon
 } from './components';
 
 import {
@@ -24,7 +25,7 @@ import {
   team_data
 } from './data';
 
- 
+
 const useStyles = makeStyles(theme => ({
   pagePaddingTop: {
     paddingTop: theme.spacing(3),
@@ -54,7 +55,7 @@ const useStyles = makeStyles(theme => ({
     padding: '74px calc(50% - 600px)',
     [theme.breakpoints.down('md')]: {
       // paddingTop: theme.spacing(5),
-      padding: '74px 64px',
+      // padding: '74px 64px',
     },
   },
   computing_bg: {
@@ -80,22 +81,32 @@ const Home = () => {
 
   return (
     <div>
+      <div className='noticebar'>
+        <div className='noticeicon'>
+        </div>
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+      </div>
 
       <Section className={classes.pagePaddingTop}>
         <Hero />
       </Section>
 
       <Section>
+        <Comingsoon />
+      </Section>
+
+      <Section>
         <What />
       </Section>
-      
+
       <Section className={classes.connect}>
-        <Connect data={connect_data } />
+        <Connect />
+      </Section>
+
+      <Section>
+        <Advantages data={advantages_data} />
       </Section>
       
-      <Section>
-        <Advantages data={advantages_data } />
-      </Section>
       <Section>
         <Provider data={provider_data} />
       </Section>
@@ -103,7 +114,7 @@ const Home = () => {
       <Section className={classes.computing_bg}>
         <Computing data={computing_data} />
       </Section>
-      
+
       <Section>
         <Roadmap data={team_data} />
       </Section>
@@ -119,7 +130,7 @@ const Home = () => {
       <Section>
         <Subscription />
       </Section>
-    
+
     </div>
   );
 };

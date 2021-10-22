@@ -302,6 +302,8 @@ const Hero = props => {
           </img>
 
         </Grid>
+
+        
       </Grid>
     </div>
   );

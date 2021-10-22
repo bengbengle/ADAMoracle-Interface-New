@@ -17,3 +17,5 @@ export { default as Computing } from './Computing';
 export { default as News } from './News';
 export { default as Team } from './Team';
 export { default as Roadmap } from './Roadmap';
+
+export { default as Comingsoon } from './Comingsoon';

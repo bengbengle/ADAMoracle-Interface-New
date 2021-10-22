@@ -344,6 +344,10 @@ const Main = ({ children, themeToggler, themeMode }) => {
       title: 'Pledge',
       id: 'pledge',
     },
+    AdamBox: {
+      title: 'AdamBox',
+      id: 'adambox',
+    },
     // Ecosystem: {
     //   title: 'Ecosystem',
     //   id: 'ecosystem',

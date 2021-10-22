@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
     color: '#3c3c3c',
     fontSize: '80px',
     [theme.breakpoints.down('md')]: {
-      fontSize: '50px',
+      fontSize: '44px',
     },
   },
 }));

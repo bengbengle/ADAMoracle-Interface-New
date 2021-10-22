@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.3bf25895.chunk.css",
-    "main.js": "/static/js/main.ec0afda4.chunk.js",
-    "main.js.map": "/static/js/main.ec0afda4.chunk.js.map",
+    "main.css": "/static/css/main.361cd672.chunk.css",
+    "main.js": "/static/js/main.2401d75a.chunk.js",
+    "main.js.map": "/static/js/main.2401d75a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2f68d618.js",
     "runtime-main.js.map": "/static/js/runtime-main.2f68d618.js.map",
     "static/css/2.77284928.chunk.css": "/static/css/2.77284928.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.98a486eb.chunk.js.map": "/static/js/2.98a486eb.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.77284928.chunk.css.map": "/static/css/2.77284928.chunk.css.map",
-    "static/css/main.3bf25895.chunk.css.map": "/static/css/main.3bf25895.chunk.css.map",
+    "static/css/main.361cd672.chunk.css.map": "/static/css/main.361cd672.chunk.css.map",
     "static/js/2.98a486eb.chunk.js.LICENSE.txt": "/static/js/2.98a486eb.chunk.js.LICENSE.txt",
     "static/media/alibaba-font.css": "/static/media/AlibabaSans-Regular.a30edabf.otf",
     "static/media/header-bg.f39638dc.png": "/static/media/header-bg.f39638dc.png",
@@ -20,7 +20,7 @@
     "static/js/runtime-main.2f68d618.js",
     "static/css/2.77284928.chunk.css",
     "static/js/2.98a486eb.chunk.js",
-    "static/css/main.3bf25895.chunk.css",
-    "static/js/main.ec0afda4.chunk.js"
+    "static/css/main.361cd672.chunk.css",
+    "static/js/main.2401d75a.chunk.js"
   ]
 }

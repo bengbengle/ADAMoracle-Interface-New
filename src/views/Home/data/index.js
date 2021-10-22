@@ -301,17 +301,15 @@ export const provider_data = [
   },
   {
     title: 'Full coverage ecologically',
-    description:
-      'ADAMoracle can support BSC, Polygon, Sonala, Heco, Difinity, OKExChain, etc. in the future.',
+    description: 'ADAMoracle can support BSC, Polygon, Sonala, Heco, Difinity, OKExChain, etc. in the future.',
     illustration: '/assets/ad-2.png',
   },
   {
     label: 'Distributed Data Source',
     title: 'Distributed Data Source',
-    description:
-      'ADAMoracle data storage provider will encrypt and sign all data transmitted between systems and prove on the chain where the data comes from.',
+    description: 'ADAMoracle data storage provider will encrypt and sign all data transmitted between systems and prove on the chain where the data comes from.',
     illustration: '/assets/ad-3.png',
-  },
+  }
 ];
 
 export const computing_data = [

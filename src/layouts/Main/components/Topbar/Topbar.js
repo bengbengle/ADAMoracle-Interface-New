@@ -227,6 +227,11 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
       <div className={classes.flexGrow} />
       <Hidden smDown>
         <List disablePadding className={classes.navigationContainer}>
+          <ListItem className={clsx(classes.listItem, '')} onClick={redirectToPledge}>
+            ADAMBox
+            <div className='fireicon'></div>
+          </ListItem>
+
           <ListItem className={clsx(classes.listItem)} onClick={scrollToComputingNode}>
             Developer
           </ListItem>
@@ -236,25 +241,6 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
           <ListItem className={clsx(classes.listItem)} onClick={redirectToPledge}>
             Pledge
           </ListItem>
-          {/* <ListItem className={clsx(classes.listItem)}>
-            Ecosystem
-          </ListItem>
-          <ListItem className={clsx(classes.listItem)}>
-            Blog
-          </ListItem> */}
-
-          {/* {
-            [...Navs].map((page, i) => (
-              <ListItem className={clsx(classes.listItem)}>
-                {
-
-                  page.title
-                }
-              </ListItem>
-            ))
-          } */}
-
-
         </List>
       </Hidden>
       <Hidden smDown>

@@ -109,7 +109,7 @@ const What = props => {
           data-aos="fade-up"
           className={classes.videobox}
         >
-          <Image
+          {/* <Image
             src="/assets/video.png"
             alt="..."
             className={classes.coverImage}
@@ -119,7 +119,13 @@ const What = props => {
             src={"/assets/start.png?tempid=" + Math.random()}
             alt="...." 
             className={classes.imagestart}
-          /> 
+          />  */}
+          <iframe src="https://www.youtube-nocookie.com/embed/Vi62u5p3hmU?controls=0&loop=1&autoplay=1&showinfo=0" 
+          title="YouTube video player" frameborder="0" 
+          width='100%'
+          height='100%'
+          className={classes.coverImage}
+          allow="accelerometer=0; autoplay=1; loop=1; showinfo=0; encrypted-media=0; gyroscope; picture-in-picture" ></iframe>
         </Grid>
       </Grid>
     </div>

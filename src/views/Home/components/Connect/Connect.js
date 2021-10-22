@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     color: '#3c3c3c',
     fontSize: '80px',
     [theme.breakpoints.down('md')]: {
-      fontSize: '50px',
+      fontSize: '44px',
     },
   },
   avatar: {
@@ -48,10 +48,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '35px',
-    // backgroundRepeat: 'no-repeat',
-    // background: "url('/assets/shadow.png')",
-    // backgroundSize: '100% 100%',
+    padding: '20px',
 
     [theme.breakpoints.up('md')]: {
       padding: '100px'
@@ -84,26 +81,26 @@ const Connect = props => {
   const classes = useStyles();
 
   const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
-    defaultMatches: true,
-  });
+  // const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  //   defaultMatches: true,
+  // });
 
 
-  const connect_data  = [
-    {
-      logo: '/assets/sys-icon1.png',
-      name: 'Real World Data/Events',
-    },
-    {
-      logo: '/assets/sys-icon2.png',
-      name: 'ADAMoracle Saas System',
+  // const connect_data  = [
+  //   {
+  //     logo: '/assets/sys-icon1.png',
+  //     name: 'Real World Data/Events',
+  //   },
+  //   {
+  //     logo: '/assets/sys-icon2.png',
+  //     name: 'ADAMoracle Saas System',
    
-    },
-    {
-      logo: '/assets/sys-icon3.png',
-      name: 'Wide-area Nodes',
-    }
-  ];
+  //   },
+  //   {
+  //     logo: '/assets/sys-icon3.png',
+  //     name: 'Wide-area Nodes',
+  //   }
+  // ];
 
   return (
     <div className={classes.bgbox} {...rest} data-aos="fade-up">
@@ -130,7 +127,7 @@ Connect.propTypes = {
   /**
    * data to be rendered
    */
-  data: PropTypes.array.isRequired,
+  // data: PropTypes.array.isRequired,
 };
 
 export default Connect;

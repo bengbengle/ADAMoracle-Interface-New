@@ -68,14 +68,18 @@ const Provider = props => {
   const classes = useStyles();
 
   const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+
+  const isMd = useMediaQuery(theme.breakpoints.down('md'), {
     defaultMatches: true,
   });
+  
+  console.log(isMd)
   const image1 = {
     src: '/assets/arrow.png',
     srcSet: 'https://assets.maccarianagency.com/the-front/photos/expo-gallery/gallery1@2x.jpg 2x',
-    alt: '...',
+    alt: '...'
   }
+
   return (
     <div className={className} data-aos="fade-up" {...rest} id='become-data-provider'>
       <SectionHeader
@@ -115,8 +119,7 @@ const Provider = props => {
             item
             container
             xs={12}
-            sm={12}
-            // md={6}
+            sm={12} 
             spacing={5}
             direction={index % 2 === 1 ? 'row-reverse' : 'row'}
             className={classes.listGrid}
@@ -133,7 +136,7 @@ const Provider = props => {
                   </>
                 }
                 ctaGroup={[
-                  <div className={ '' } style={{
+                  <div style={{
                     width: '13px',
                     height: '5px',
                     background: '#4B4B4B',
@@ -158,8 +161,9 @@ const Provider = props => {
               />
             </Grid>
             <Grid item container justify="center" xs={12} sm={12} md={6} style={{
-              padding: '50px',
-              paddingRight: '156px' 
+              padding:  isMd ? '0px' : '50px',
+              paddingRight: isMd ? '0px' : '156px', 
+              margin: isMd ? '30px 10%' : '0px' 
             }}>
               <Image src={item.illustration} alt={item.title} />
             </Grid>

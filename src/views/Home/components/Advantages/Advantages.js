@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: '80px',
     display: 'inline-block',
     [theme.breakpoints.down('md')]: {
-      fontSize: '50px',
+      fontSize: '44px',
     },
   },
   avatar: {

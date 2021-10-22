@@ -144,10 +144,10 @@ main {
 .sectionBox div h5 {
   font-weight: 800;
   color: #434343!important;
-  margin-bottom: 25px;
-  /* max-width: 74%; */
-  font-size: 35px!important;
+  margin-bottom: 25px; 
+  font-size: 30px!important;
   margin-top: 30px;
+  min-width: 450px;
 }
 
 @media (max-width: 996px){
@@ -166,5 +166,30 @@ main {
 
 
 
+.noticebar {
+  width: 100%;
+  background: #ff6b2278;
+  height: 40px;
+  position: absolute;
+  display: inline-flex;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.noticebar .noticeicon {
+  background: url(../images/notice.png) center center no-repeat;
+  margin-left: 10%;
+  height: 100%;
+  width: 40px;
+  align-items: center;
+}
 
+
+.fireicon {
+  background: url(../images/fire.png) center center no-repeat;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: -15px;
+  left: 10px;
+}
 
