@@ -96,7 +96,7 @@ const Home = () => {
         <Hero />
       </Section>
 
-      <Section>
+      <Section style={{ paddingBottom: '0px' }}>
         <Comingsoon />
       </Section>
 
