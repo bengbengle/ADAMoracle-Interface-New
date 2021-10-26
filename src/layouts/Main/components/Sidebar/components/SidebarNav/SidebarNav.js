@@ -199,7 +199,7 @@ const SidebarNav = props => {
           Solutions
         </Button>
       </ListItem>
-      <ListItem className={classes.listItem}>
+      {/* <ListItem className={classes.listItem}>
         <Button
           fullWidth
           component="a"
@@ -208,7 +208,7 @@ const SidebarNav = props => {
         >
           Pledge
         </Button>
-      </ListItem>
+      </ListItem> */}
       {/* <ListItem className={classes.listItem}>
         <Button
           fullWidth
@@ -228,7 +228,7 @@ const SidebarNav = props => {
         </Button>
       </ListItem> */}
 
-      <ListItem className={classes.listItem}>
+      {/* <ListItem className={classes.listItem}>
         <Button
           variant="contained"
           color="primary"
@@ -239,7 +239,7 @@ const SidebarNav = props => {
         >
           Go Now
         </Button>
-      </ListItem>
+      </ListItem> */}
     </List>
   );
 };

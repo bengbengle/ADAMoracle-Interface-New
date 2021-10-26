@@ -187,7 +187,7 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
   }
     
   const redirectToAdambox = event => {
-    window.open("http://testnet.mine.adambox.io/");
+    // window.open("http://testnet.mine.adambox.io/");
   }
   const scrollToDataProvider = (event) => {
     const anchor = (event.target.ownerDocument || document).querySelector('#become-data-provider');
@@ -242,9 +242,9 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
           <ListItem className={clsx(classes.listItem)} onClick={scrollToDataProvider}>
             Solutions
           </ListItem>
-          <ListItem className={clsx(classes.listItem)} onClick={redirectToPledge}>
+          {/* <ListItem className={clsx(classes.listItem)} onClick={redirectToPledge}>
             Pledge
-          </ListItem>
+          </ListItem> */}
         </List>
       </Hidden>
       <Hidden smDown>

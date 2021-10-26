@@ -10,19 +10,21 @@ const useStyles = makeStyles(theme => ({
     maxWidth: 'initial'
   },
   image: {
-    marginLeft: '2%',
-    marginTop: '-20%',
-    width: '90%',
+    marginLeft: '10%',
+    marginTop: '-10%',
+    width: '73%',
     transition: 'box-shadow .25s ease,transform .25s ease,-webkit-transform .25s ease',
     '&:hover': {
       transform: 'translate3d(0,-5px,0)',
       boxShadow: '0 1.5rem 2.5rem rgb(22 28 45 / 10%), 0 0.3rem 0.5rem -0.5rem rgb(22 28 45 / 5%) !important',
     },
+    [theme.breakpoints.up(1280) && theme.breakpoints.down(1550) ]: {
+      marginLeft: '20%'
+    },
     [theme.breakpoints.down('sm')]: {
       marginLeft: -40,
-      marginTop: -150,
       width: '100%',
-      marginTop: 0, 
+      marginTop: 50, 
     },
   },
   leftcontainer: {
@@ -237,6 +239,9 @@ const Hero = props => {
               <IconButton className={classes.socialIcon} href='https://adamoracle.medium.com' target='_blank'>
                 <Avatar alt="Medium" src="/assets/medium.png" />
               </IconButton>
+              <IconButton className={classes.socialIcon} href='https://discord.gg/gWgaysNZPq' target='_blank'>
+                <Avatar alt="Medium" src="/assets/discord.png" />
+              </IconButton>
             </ListItem>
           </List>
         </Grid>
@@ -275,6 +280,9 @@ const Hero = props => {
                 <IconButton className={classes.socialIcon} href='https://adamoracle.medium.com' target='_blank'>
                   <Avatar alt="Medium" src="/assets/medium.png" />
                 </IconButton>
+                <IconButton className={classes.socialIcon} href='https://discord.gg/gWgaysNZPq' target='_blank'>
+                  <Avatar alt="Discord" src="/assets/discord.png" />
+                </IconButton>
               </ListItem>
             </List>
           </div>
@@ -298,12 +306,9 @@ const Hero = props => {
           data-aos={'fade-up'}
         >
           <img className={classes.image}
-            alt="TheFront Company" src="/assets/right-bar.png" width="auto" height="auto">
+            alt="TheFront Company" src="/assets/right-bar3.png" width="auto" height="auto">
           </img>
-
         </Grid>
-
-        
       </Grid>
     </div>
   );

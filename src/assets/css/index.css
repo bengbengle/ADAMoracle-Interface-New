@@ -167,20 +167,30 @@ main {
 
 
 .noticebar {
+  text-align: justify;
   width: 100%;
   background: #ff6b2278;
   height: 40px;
   position: absolute;
   display: inline-flex;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   text-align: center;
   cursor: pointer;
+  align-items: center;
+}
+@media (max-width: 996px){
+  
+  .noticebar {
+
+    font-size: 0.8rem;
+  }
 }
 .noticebar .noticeicon {
-  background: url(../images/notice.png) center center no-repeat;
-  margin-left: 10%;
+  margin-right: 10px;
+  background: url(../images/notice.gif) center center no-repeat;
+  margin-left: 15%;
   height: 100%;
-  width: 40px;
+  width: 60px;
   align-items: center;
 }
 

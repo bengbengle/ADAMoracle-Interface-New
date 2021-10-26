@@ -52,11 +52,7 @@ const useStyles = makeStyles(theme => ({
     backgroundRepeat: 'no-repeat',
     margin: '0',
     maxWidth: '100%',
-    padding: '74px calc(50% - 600px)',
-    [theme.breakpoints.down('md')]: {
-      // paddingTop: theme.spacing(5),
-      // padding: '74px 64px',
-    },
+    padding: '74px calc(50% - 600px)'
   },
   computing_bg: {
     '&::before': {
@@ -80,7 +76,7 @@ const Home = () => {
   const classes = useStyles();
   
   const redirectToAdambox = event => {
-    window.open("http://testnet.mine.adambox.io/");
+    // window.open("http://testnet.mine.adambox.io/");
   }
 
   return (
@@ -88,8 +84,7 @@ const Home = () => {
       <div className='noticebar' onClick={redirectToAdambox}>
         <div className='noticeicon'>
         </div>
-        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
+        ADAMoracle wide-area node network beta testing round 2 is upcoming, learn more about the"STARCRAFT" event
       </div>
 
       <Section className={classes.pagePaddingTop}>

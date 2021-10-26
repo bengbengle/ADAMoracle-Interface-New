@@ -12,6 +12,9 @@ const useStyles = makeStyles(theme => ({
         fontWeight: 800,
         color: 'rgb(255 107 34)',
         marginLeft: '30px',
+        [theme.breakpoints.down('md')]: {
+            fontSize: '1.3rem',
+        },
     },
     times: {
         fontSize: '4.55em',
@@ -69,6 +72,8 @@ const Index = props => {
     let [txMin, settxMin] = useState(0);
     let [txSec, settxSec] = useState(0);
 
+    let [txTitle, setTxTitle] = useState('ADAMoracle Global Node Network 2nd Round Test Coming Soon...');
+
     const { className, ...rest } = props;
     const classes = useStyles();
 
@@ -76,15 +81,6 @@ const Index = props => {
     const isMd = useMediaQuery(theme.breakpoints.up('md'), {
         defaultMatches: true,
     });
-
-
-
-    const $ = (el) => {
-        if (typeof (el) == 'string') {
-            return (document.getElementById(el));
-        }
-        return (el);
-    }
 
     const fillZero = (num, digit) => {
         var str = '' + num;
@@ -96,11 +92,24 @@ const Index = props => {
 
     const updateTime = () => {
 
-        var oEndDate = new Date(2022, (0 - 1), 1);
+        var oEndDate = new Date(2021, (10 - 1), 27, 17, 0, 0, 0);
         var oNowDate = new Date();
 
+        var oEndDate1 = new Date();
+        var oEndDate2 = oEndDate1.setTime(oEndDate.getTime() + 14 * 1000 * 60 * 60 * 24);
+
+        console.log('oEndDate2::', oEndDate2)
+
+        var oEndDate3 =  new Date();
+        oEndDate3 = new Date(oEndDate) 
+        if(oEndDate <=  oNowDate) {
+            oEndDate3 =  new Date(oEndDate2)
+            setTxTitle('ADAMoracle Global Node Network is Undergoing the 2nd Round of Testing')
+            console.log('小于。。。。')
+        }
+        
         var iRemain = 0;
-        iRemain = parseInt((oEndDate.getTime() - oNowDate.getTime()) / 1000);
+        iRemain = parseInt((oEndDate3.getTime() - oNowDate.getTime()) / 1000);
 
         var iDay = parseInt(iRemain / 86400); //剩余天数
 
@@ -127,13 +136,9 @@ const Index = props => {
         // sTxtSec.innerHTML = fillZero(iSec, 2);
     }
 
-    // timer = setInterval(updateTime, 1000);
-    // updateTime()
+ 
 
-
-    useInterval(() => {
-        // Your custom logic here
-        // setCount(count + 1);
+    useInterval(() => { 
         updateTime()
     }, 1000);
     return (
@@ -146,7 +151,10 @@ const Index = props => {
                                 title={
                                     <span style={{ display: 'inline-flex', flexFlow: 'row' }}>
                                         <div className={classes.titleTxt}>
-                                            ADAMOracle Global Node Network 2nd Round Test Coming soon...
+                                            
+                                            { 
+                                            txTitle
+                                            }
                                         </div>
                                     </span>
                                 }
