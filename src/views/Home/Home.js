@@ -76,7 +76,11 @@ const Home = () => {
   const classes = useStyles();
   
   const redirectToAdambox = event => {
-    // window.open("http://testnet.mine.adambox.io/");
+    // var utc = Date.UTC(2021,10 - 1, 27, 9, 0, 0);
+    // var date = new Date(utc);
+    // if(new Date() > date) {
+      window.open("https://adamoracle.medium.com/adamoracles-2nd-round-test-is-coming-33e4d67fe802");
+    // }
   }
 
   return (

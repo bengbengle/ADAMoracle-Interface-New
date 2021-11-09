@@ -73,6 +73,7 @@ const Index = props => {
     let [txSec, settxSec] = useState(0);
 
     let [txTitle, setTxTitle] = useState('ADAMoracle Global Node Network 2nd Round Test Coming Soon...');
+    let [hidetimebar, setHideTimeBar] = useState(false)
 
     const { className, ...rest } = props;
     const classes = useStyles();
@@ -92,7 +93,11 @@ const Index = props => {
 
     const updateTime = () => {
 
-        var oEndDate = new Date(2021, (10 - 1), 27, 17, 0, 0, 0);
+        // var oEndDate = new Date(2021, (10 - 1), 27, 17, 0, 0, 0);
+        
+        var utc = Date.UTC(2021,10 - 1, 27, 9, 0, 0);
+        var oEndDate = new Date(utc);
+
         var oNowDate = new Date();
 
         var oEndDate1 = new Date();
@@ -106,6 +111,11 @@ const Index = props => {
             oEndDate3 =  new Date(oEndDate2)
             setTxTitle('ADAMoracle Global Node Network is Undergoing the 2nd Round of Testing')
             console.log('小于。。。。')
+            if(oNowDate >= oEndDate3) {// 当公测结束后
+                setHideTimeBar(true)
+            }
+        } else {
+            
         }
         
         var iRemain = 0;
@@ -142,7 +152,7 @@ const Index = props => {
         updateTime()
     }, 1000);
     return (
-        <div className={className} {...rest}>
+        <div className={className} {...rest} style={{ display: hidetimebar ? 'none' : 'block' }}>
             <Grid container spacing={isMd ? 4 : 2}>
                 <Grid item xs={12} md={12} data-aos="fade-up">
                     <Grid container spacing={2}>

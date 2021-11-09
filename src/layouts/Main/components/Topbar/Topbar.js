@@ -187,7 +187,11 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
   }
     
   const redirectToAdambox = event => {
-    // window.open("http://testnet.mine.adambox.io/");
+    var utc = Date.UTC(2021,10 - 1, 27, 9, 0, 0);
+    let date = new Date(utc);
+    if(new Date() > date) {
+      window.open("http://testnet.mine.adambox.io/");
+    }
   }
   const scrollToDataProvider = (event) => {
     const anchor = (event.target.ownerDocument || document).querySelector('#become-data-provider');
