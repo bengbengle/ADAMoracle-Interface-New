@@ -131,7 +131,7 @@ const Team = props => {
 
     const { item, index } = props
     return (
-      <Grid item xs={12} sm={12} md={4} key={index} data-aos="fade-up" spacing={10} ref={hoverRef}
+      <Grid item xs={12} sm={12} md={3} key={index} data-aos="fade-up" spacing={10} ref={hoverRef}
         style={{
           backgroundColor: '#00000000'
         }}>

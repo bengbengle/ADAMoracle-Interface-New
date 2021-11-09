@@ -340,7 +340,7 @@ export const news_data = [
     cover: {
       src: '/assets/left.png', 
     },
-    title: "Let's start the oracle 3.0 era together with co-Founder&CMO Christopher Quet! ",
+    title: "Let's start the oracle 3.0 era together with Co-founder&CMO Christopher Quet! ",
     url: 'https://www.youtube.com/watch?v=l6q0I0SO5MU&t=29s'
   },
   {
@@ -360,8 +360,21 @@ export const team_data = [
     },
     title: 'Ahmed Ebrahim',
     subtitle:
-      'ADAMoracle founder and CEO Ahmed Ebrahim',
-    description: 'Ahmed Ebrahim has an MBA in international finance and investment and has a deep understanding of financial planning, accounting, analysis and investment. In 2018, he was awarded by National Development Bank, and successfully invested in plenty of blockchain projects.',
+      'Founder and CEO',
+    description: 'MBA in international finance and investment and has a deep understanding of financial planning, accounting, analysis and investment. In 2018, he was awarded by National Development Bank, and successfully invested in plenty of blockchain projects.',
+    date: '04 Aug',
+    tags: [],
+  },
+  
+  {
+    cover: {
+      src: '/assets/p-4.png',
+      srcSet: '/assets/p-4.png 2x',
+    },
+    title: "Michael Clare‎",
+    subtitle:
+      "CSO of Global Market",
+    description: 'Economist at the Ministry of Finance for The Bahamas, ambassador of Global Blockchain Business Council (GBBC), Master of Science degree in Digital Currency from the University of Nicosia. Expert in cryptocurrency and digital asset.',
     date: '04 Aug',
     tags: [],
   },
@@ -372,8 +385,8 @@ export const team_data = [
     },
     title: "Christopher Quet‎",
     subtitle:
-      "ADAMoracle Co-founder Christopher Quet",
-    description: 'Christopher Quet graduated in International Trading in Lyon University, France, after studying in electronics. Christopher has operated and developed business in over 80 countries throughout his 22 years of experience, developing partnerships, and unique customized solutions. ',
+      "Co-founder and CMO",
+    description: 'Graduated from the University of Lyon, France, majoring in international trade. 22 years of working experience, conduces business cooperation in more than 80 countries, and successfully operated well-known storage projects and have customers all over the world ',
     date: '04 Aug',
     tags: [],
   },
@@ -385,9 +398,11 @@ export const team_data = [
     },
     title: "Olga Petrovska‎",
     subtitle:
-      "ADAMoracle Co-founder and COO Olga Petrovska",
-    description: 'Olga Petrovskashe studied English and Literature at the Uman State Linguistic University. After some years of experience working abroad for various international corporations, first in USA and in the United Arab Emirates for the last 8 years, Olga became an expert in blockchain related projects.”',
+      "Co-founder and COO",
+    description: 'Majored in English and literature at Uman National Language University. She has been working at multinational enterprises in the United States for many years, then studied blockchain in the United Arab Emirates for eight years, and became an expert in blockchain-related projects.',
     date: '04 Aug',
     tags: [],
   },
+  ,
+
 ]
