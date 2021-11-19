@@ -101,7 +101,10 @@ const Index = props => {
         var oNowDate = new Date();
 
         var oEndDate1 = new Date();
-        var oEndDate2 = oEndDate1.setTime(oEndDate.getTime() + 14 * 1000 * 60 * 60 * 24);
+        // var oEndDate2 = oEndDate1.setTime(oEndDate.getTime() + 14 * 1000 * 60 * 60 * 24);
+        
+        // 新 公测结束时间
+        var oEndDate2 = Date.UTC(2021,11 - 1, 16, 0, 0, 0);
 
         console.log('oEndDate2::', oEndDate2)
 
@@ -109,8 +112,13 @@ const Index = props => {
         oEndDate3 = new Date(oEndDate) 
         if(oEndDate <=  oNowDate) {
             oEndDate3 =  new Date(oEndDate2)
+
             setTxTitle('ADAMoracle Global Node Network is Undergoing the 2nd Round of Testing')
             console.log('小于。。。。')
+
+            // let pub_test_end_time = Date.UTC(2021,11 - 1, 16, 0, 0, 0);
+            // let o_pub_test_end_time = new Date(pub_test_end_time);
+
             if(oNowDate >= oEndDate3) {// 当公测结束后
                 setHideTimeBar(true)
             }

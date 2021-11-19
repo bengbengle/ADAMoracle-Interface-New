@@ -6,8 +6,16 @@ import { Image } from 'components/atoms';
 import { DescriptionCta } from 'components/molecules';
 import { CardProduct } from 'components/organisms';
 import Collapse from '@material-ui/core/Collapse';
-// import { Button, Typography, Grid, Paper  } from '@material-ui/core';
+import { Icon } from 'components/atoms';
+
 const useStyles = makeStyles(theme => ({
+  linkedinIcon: {
+    width: '25px',
+    height: '25px',
+    cursor: 'pointer',
+    marginLeft: '10px',
+    backgroundColor:'#353535d1',
+  },
   textWhite: {
     color: 'white',
     marginBottom: '100px',
@@ -71,7 +79,10 @@ const useStyles = makeStyles(theme => ({
   },
   bottomtitle: {
     fontWeight: 500,
-    fontSize: '18px'
+    fontSize: '18px',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center'
   },
 }));
 
@@ -107,7 +118,7 @@ const Team = props => {
   const BlogMediaContent = props => {
 
     console.log(props)
-    const { title, subtitle, description } = props
+    const { title, subtitle, description, linkedin } = props
     return (
       <>
         <Image
@@ -117,11 +128,15 @@ const Team = props => {
 
         />
         <div className={classes.bottomTips}>
-          <div className={classes.bottomtitle}> {title}</div>
+          <div className={classes.bottomtitle}>
+            {title}
+              <img className={classes.linkedinIcon} onClick={e => window.open(linkedin, '_blank')}
+                alt="TheFront Company" src="/assets/linkedin.png" width="auto" height="auto">
+              </img>
+            </div>
           <div className='bottomDesc'>{subtitle}</div>
-          <div className='bottomDesc'>
-          </div>
-        </div> 
+          <div className='bottomDesc'></div>
+        </div>
       </>
     );
   }
@@ -140,7 +155,7 @@ const Team = props => {
           liftUp
           className={classes.cardProduct}
           mediaContent={
-            <BlogMediaContent {...item.cover} title={item.title} subtitle={item.subtitle} alt={item.title}/>
+            <BlogMediaContent {...item.cover} title={item.title} subtitle={item.subtitle} alt={item.title} linkedin={item.linkedin}  />
           }
           cardContent={
             <Collapse in={ isHovered } >

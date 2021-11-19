@@ -79,7 +79,9 @@ const Home = () => {
     // var utc = Date.UTC(2021,10 - 1, 27, 9, 0, 0);
     // var date = new Date(utc);
     // if(new Date() > date) {
-      window.open("https://adamoracle.medium.com/adamoracles-2nd-round-test-is-coming-33e4d67fe802");
+
+      window.open("https://adamoracle.medium.com/adamoracle-lab-launches-adam-token-mapping-upgrade-ed7d8a3299d8");
+      // window.open("https://adamoracle.medium.com/adamoracles-2nd-round-test-is-coming-33e4d67fe802");
     // }
   }
 
@@ -88,7 +90,8 @@ const Home = () => {
       <div className='noticebar' onClick={redirectToAdambox}>
         <div className='noticeicon'>
         </div>
-        ADAMoracle wide-area node network beta testing round 2 is upcoming, learn more about the"STARCRAFT" event
+        ADAMoracle Lab launches ADAM token mapping upgrade
+        {/* ADAMoracle wide-area node network beta testing round 2 is upcoming, learn more about the"STARCRAFT" event */}
       </div>
 
       <Section className={classes.pagePaddingTop}>

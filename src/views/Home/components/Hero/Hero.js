@@ -291,7 +291,7 @@ const Hero = props => {
               Develope with ADAMoracle
             </Button>
             <Button size="large" variant="outlined" color="primary"  className={ classes.marginLeft } onClick={
-              () => window.open('/assets/files/adamoracle_whitepaper.pdf', '_blank')
+              () => window.open('/assets/files/adamoracle_whitepaper.pdf?t='+ new Date(), '_blank')
             }>
               White paper
             </Button>

@@ -359,10 +359,10 @@ export const team_data = [
       srcSet: '/assets/p-1.png 2x',
     },
     title: 'Ahmed Ebrahim',
-    subtitle:
-      'Founder and CEO',
+    subtitle: 'Founder and CEO',
     description: 'MBA in international finance and investment and has a deep understanding of financial planning, accounting, analysis and investment. In 2018, he was awarded by National Development Bank, and successfully invested in plenty of blockchain projects.',
     date: '04 Aug',
+    linkedin: 'https://www.linkedin.com/in/ahmed-ebrahim-545406141/',
     tags: [],
   },
   
@@ -376,6 +376,7 @@ export const team_data = [
       "CSO of Global Market",
     description: 'Economist at the Ministry of Finance for The Bahamas, ambassador of Global Blockchain Business Council (GBBC), Master of Science degree in Digital Currency from the University of Nicosia. Expert in cryptocurrency and digital asset.',
     date: '04 Aug',
+    linkedin: 'https://www.linkedin.com/in/michael-clare-mba-msc-491279b3/',
     tags: [],
   },
   {
@@ -384,23 +385,23 @@ export const team_data = [
       srcSet: '/assets/p-2.png 2x',
     },
     title: "Christopher Quet‎",
-    subtitle:
-      "Co-founder and CMO",
+    subtitle: "Co-founder and CMO",
     description: 'Graduated from the University of Lyon, France, majoring in international trade. 22 years of working experience, conduces business cooperation in more than 80 countries, and successfully operated well-known storage projects and have customers all over the world ',
     date: '04 Aug',
+    linkedin: 'https://www.linkedin.com/in/christopher-quet-a844921b1/',
     tags: [],
   },
 
   {
     cover: {
-      src: '/assets/p-3.png',
-      srcSet: '/assets/p-3.png 2x',
+      src: '/assets/p-5.png',
+      srcSet: '/assets/p-5.png 2x',
     },
     title: "Olga Petrovska‎",
-    subtitle:
-      "Co-founder and COO",
+    subtitle: "Co-founder and COO",
     description: 'Majored in English and literature at Uman National Language University. She has been working at multinational enterprises in the United States for many years, then studied blockchain in the United Arab Emirates for eight years, and became an expert in blockchain-related projects.',
     date: '04 Aug',
+    linkedin: 'https://www.linkedin.com/in/olga-petrovska-528108194/',
     tags: [],
   },
   ,
