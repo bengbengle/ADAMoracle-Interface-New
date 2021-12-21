@@ -190,7 +190,7 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
     var utc = Date.UTC(2021,10 - 1, 27, 9, 0, 0);
     let date = new Date(utc);
     if(new Date() > date) {
-      window.open("http://testnet.mine.adambox.io/");
+      window.open("https://www.adambox.io/");
     }
   }
   const scrollToDataProvider = (event) => {

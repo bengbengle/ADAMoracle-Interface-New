@@ -79,9 +79,9 @@ const Home = () => {
     // var utc = Date.UTC(2021,10 - 1, 27, 9, 0, 0);
     // var date = new Date(utc);
     // if(new Date() > date) {
-
-      window.open("https://adamoracle.medium.com/adamoracle-lab-launches-adam-token-mapping-upgrade-ed7d8a3299d8");
-      // window.open("https://adamoracle.medium.com/adamoracles-2nd-round-test-is-coming-33e4d67fe802");
+      window.open("https://adamoracle.medium.com/adamoracle-area-node-network-will-be-officially-launched-today-c0528d18c1c4"); // 发布正式版
+      // window.open("https://adamoracle.medium.com/adamoracle-lab-launches-adam-token-mapping-upgrade-ed7d8a3299d8"); // 公测开始
+      // window.open("https://adamoracle.medium.com/adamoracles-2nd-round-test-is-coming-33e4d67fe802"); // 公测倒计时
     // }
   }
 
@@ -90,8 +90,9 @@ const Home = () => {
       <div className='noticebar' onClick={redirectToAdambox}>
         <div className='noticeicon'>
         </div>
-        ADAMoracle Lab launches ADAM token mapping upgrade
-        {/* ADAMoracle wide-area node network beta testing round 2 is upcoming, learn more about the"STARCRAFT" event */}
+        ADAMoracle wide area node network is officially launched, participate in the first phase of minning, and obtain 12,000,000 ADAM dividends
+        {/* ADAMoracle Lab launches ADAM token mapping upgrade 公测开始 */}
+        {/* ADAMoracle wide-area node network beta testing round 2 is upcoming, learn more about the"STARCRAFT" event  公测倒计时*/}
       </div>
 
       <Section className={classes.pagePaddingTop}>
